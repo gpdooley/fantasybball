@@ -2,12 +2,11 @@ name: Daily Basketball Monster Scraper
 
 on:
   schedule:
-    # Runs at 06:00 UTC every day
     - cron: '0 6 * * *'
-  workflow_dispatch: # Allows manual trigger button in GitHub UI
+  workflow_dispatch:
 
 permissions:
-  contents: write # Grants the workflow permission to commit and push data.json
+  contents: write
 
 jobs:
   scrape-and-commit:
