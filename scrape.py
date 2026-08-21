@@ -3,9 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 
 def scrape_basketball_monster():
+    # URL configured for 9-cat, Yahoo default settings, top players
     url = "https://basketballmonster.com/PlayerRankings.aspx"
     
-    # Realistic browser headers to prevent getting blocked
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -23,7 +23,7 @@ def scrape_basketball_monster():
 
         soup = BeautifulSoup(response.text, "html.parser")
         
-        # Try finding the rankings table by common Basketball Monster IDs/classes
+        # Locate main grid table
         table = soup.find("table", {"id": "datatable"}) or soup.find("table", {"class": "grid"}) or soup.find("table")
         
         if not table:
@@ -36,48 +36,86 @@ def scrape_basketball_monster():
 
         for row in rows:
             cols = row.find_all(["td", "th"])
-            if len(cols) < 5:
+            
+            # Skip short or non-data rows
+            if len(cols) < 6:
+                continue
+
+            # Skip header or control rows
+            row_text = row.text.lower()
+            if "rank" in row_text or "player" in row_text or "value" in row_text:
                 continue
 
             try:
-                # Column parsing with fallback defaults
-                name_elem = cols[1].find("a") or cols[1]
+                # Find player link or text (BM puts player links in specific anchor tags)
+                name_elem = row.find("a", href=lambda h: h and "player" in h.lower())
+                if not name_elem:
+                    continue
                 name = name_elem.text.strip()
-                pos = cols[2].text.strip()
-                
-                cost_text = cols[3].text.strip().replace("$", "")
-                cost = float(cost_text) if cost_text and cost_text.replace('.', '', 1).isdigit() else 1.0
-                
-                games_text = cols[4].text.strip()
-                games = int(games_text) if games_text.isdigit() else 82
 
-                total_v_text = cols[5].text.strip()
-                total_v = float(total_v_text) if total_v_text and not total_v_text.isalpha() else 0.0
+                # Search through column cells to find Position, Cost, Games, and Value
+                cell_texts = [c.text.strip() for c in cols]
 
-                # Skip header rows and zero-cost entries
-                if name.lower() not in ["player", "name"] and cost > 0:
-                    players.append({
-                        "Name": name,
-                        "Pos": pos,
-                        "Cost": cost,
-                        "G": games,
-                        "TotalV": total_v,
-                        "locked": False
-                    })
-            except Exception as row_err:
+                # Position cell (contains PG, SG, SF, PF, C)
+                pos = "Util"
+                for text in cell_texts:
+                    if any(p in text for p in ["PG", "SG", "SF", "PF", "C"]):
+                        pos = text
+                        break
+
+                # Extract dollar cost (look for '$' or Yahoo auction price column)
+                cost = 1.0
+                for text in cell_texts:
+                    if text.startswith("$"):
+                        try:
+                            cost = float(text.replace("$", "").strip())
+                            break
+                        except ValueError:
+                            pass
+
+                # Extract games played
+                games = 82
+                for text in cell_texts[3:8]:
+                    if text.isdigit() and 1 <= int(text) <= 82:
+                        games = int(text)
+                        break
+
+                # Extract overall total V value (usually a decimal like 8.42 or 0.75)
+                total_v = 0.0
+                for text in cell_texts[4:10]:
+                    try:
+                        val = float(text)
+                        if -10.0 <= val <= 25.0:
+                            total_v = val
+                            break
+                    except ValueError:
+                        continue
+
+                players.append({
+                    "Name": name,
+                    "Pos": pos,
+                    "Cost": max(1.0, cost),
+                    "G": games,
+                    "TotalV": total_v,
+                    "locked": False
+                })
+
+            except Exception:
                 continue
 
         print(f"Successfully scraped {len(players)} players.")
         
-        with open("data.json", "w") as f:
-            json.dump(players, f, indent=2)
+        if len(players) > 0:
+            with open("data.json", "w") as f:
+                json.dump(players, f, indent=2)
+        else:
+            save_empty_json()
 
     except Exception as e:
         print(f"An error occurred during scraping: {e}")
         save_empty_json()
 
 def save_empty_json():
-    """Ensures data.json always exists so Git doesn't throw pathspec error."""
     with open("data.json", "w") as f:
         json.dump([], f)
     print("Created fallback empty data.json")
