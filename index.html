@@ -1,221 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-slate-900">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>9-Cat Fantasy Basketball Roto Optimizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahoo Fantasy Basketball Auction Draft Tool</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/javascript-lp-solver@0.4.24/prod/Solver.min.js"></script>
+  <!-- Vue 3 CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    /* Custom scrollbar styling for compact tables */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #475569;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+  </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen p-6">
-  <div id="app" class="max-w-7xl mx-auto space-y-6">
+<body class="h-full text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+  <div id="app" class="min-h-full flex flex-col">
     
-    <!-- Header -->
-    <header class="flex justify-between items-center bg-slate-800 p-6 rounded-xl border border-slate-700">
-      <div>
-        <h1 class="text-2xl font-bold text-sky-400">9-Cat Roto Team Optimizer</h1>
-        <p class="text-slate-400 text-sm">
-          Data Status: 
-          <span :class="dataLoaded ? 'text-emerald-400 font-semibold' : 'text-amber-400'">
-            {{ statusMessage }}
-          </span>
-        </p>
-      </div>
-      <div class="flex gap-3">
-        <button @click="loadDataJson" class="bg-slate-700 hover:bg-slate-600 text-white font-medium px-4 py-2 rounded-lg transition text-sm">
-          Refresh Data
-        </button>
-        <label class="bg-sky-600 hover:bg-sky-500 text-white font-medium px-4 py-2 rounded-lg cursor-pointer transition text-sm">
-          Upload Custom CSV
-          <input type="file" @change="handleFileUpload" accept=".csv" class="hidden" />
-        </label>
-      </div>
-    </header>
-
-    <!-- Main Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      
-      <!-- Left Column: Controls & Selected Team -->
-      <div class="space-y-6">
-        <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-4">
-          <h2 class="text-lg font-semibold text-slate-200">Optimization Settings</h2>
-          <div class="flex justify-between text-sm">
-            <span>Budget Limit:</span>
-            <span class="font-bold text-emerald-400">${{ budget }}</span>
-          </div>
-          <div class="flex justify-between text-sm">
-            <span>Spent (Locked):</span>
-            <span class="font-bold text-amber-400">${{ lockedCost }}</span>
-          </div>
-          <div class="flex justify-between text-sm">
-            <span>Remaining:</span>
-            <span class="font-bold text-sky-400">${{ budget - lockedCost }}</span>
+    <!-- Top Header -->
+    <header class="bg-slate-800 border-b border-slate-700 px-6 py-4 shadow-md sticky top-0 z-30">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-sky-400">Yahoo Auction Draft Assistant</h1>
+          <p class="text-xs text-slate-400">9-Category Value Engine & Dynamic Roster Builder</p>
+        </div>
+        
+        <div class="flex items-center gap-6">
+          <div class="bg-slate-900/80 px-4 py-2 rounded-lg border border-slate-700 flex gap-6 text-sm">
+            <div>
+              <span class="text-xs uppercase text-slate-400 block">Locked Budget</span>
+              <span class="font-semibold text-emerald-400">${{ totalSpent }} / $200</span>
+            </div>
+            <div>
+              <span class="text-xs uppercase text-slate-400 block">Remaining</span>
+              <span class="font-semibold" :class="remainingBudget < 0 ? 'text-rose-400' : 'text-slate-200'">${{ remainingBudget }}</span>
+            </div>
+            <div>
+              <span class="text-xs uppercase text-slate-400 block">Roster</span>
+              <span class="font-semibold text-sky-400">{{ lockedPlayers.length }} / 13</span>
+            </div>
           </div>
 
           <button 
-            @click="optimizeRoster" 
-            :disabled="players.length === 0"
-            class="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 text-white font-semibold py-2.5 rounded-lg transition">
-            Optimize Optimal Roster
+            @click="refreshData" 
+            :disabled="loading"
+            class="px-3 py-2 bg-slate-700 hover:bg-slate-600 disabled:opacity-50 text-xs font-medium rounded-md transition-colors flex items-center gap-2 border border-slate-600"
+          >
+            <svg class="w-4 h-4" :class="{'animate-spin': loading}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Reload Data
           </button>
         </div>
-
-        <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-3">
-          <h2 class="text-lg font-semibold text-slate-200">Selected Team ({{ optimalTeam.length }}/13)</h2>
-          <div v-if="optimalTeam.length === 0" class="text-slate-500 text-sm italic">
-            Click Optimize to build the best $200 team.
-          </div>
-          <ul class="space-y-2 text-sm max-h-[400px] overflow-y-auto">
-            <li v-for="p in optimalTeam" :key="p.Name" class="flex justify-between items-center bg-slate-700/50 p-2 rounded">
-              <div>
-                <span class="font-medium">{{ p.Name }}</span>
-                <span class="text-xs text-slate-400 block">{{ p.Pos }} | {{ p.G }} GP</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="font-semibold text-emerald-400">${{ p.Cost }}</span>
-                <button @click="toggleLock(p)" class="text-xs px-2 py-1 rounded" :class="p.locked ? 'bg-amber-600' : 'bg-slate-600'">
-                  {{ p.locked ? 'Unlock' : 'Lock' }}
-                </button>
-              </div>
-            </li>
-          </ul>
-        </div>
       </div>
+    </header>
 
-      <!-- Right Column: Player Data Table -->
-      <div class="lg:col-span-2 bg-slate-800 p-5 rounded-xl border border-slate-700 flex flex-col">
-        <h2 class="text-lg font-semibold text-slate-200 mb-4">Player Pool ({{ players.length }})</h2>
+    <!-- Main Content Grid -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-6 flex flex-col gap-6">
+      
+      <!-- Locked Roster Summary Card & Stat Z-Score Totals -->
+      <section class="bg-slate-800 rounded-xl border border-slate-700 p-5 shadow-lg">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-3 flex items-center justify-between">
+          <span>Locked Roster 9-Cat Cumulative Strengths</span>
+          <span class="text-xs font-normal text-slate-400">Values represented in Z-score deviations</span>
+        </h2>
         
-        <div class="overflow-x-auto flex-1 max-h-[600px]">
-          <table class="w-full text-left text-xs text-slate-300">
-            <thead class="bg-slate-700/50 text-slate-400 uppercase sticky top-0 bg-slate-800">
+        <div class="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-10 gap-2 text-center text-xs">
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">PTS</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.pts)">{{ formatStat(teamStats.pts) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">3PT</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.m3)">{{ formatStat(teamStats.m3) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">REB</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.reb)">{{ formatStat(teamStats.reb) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">AST</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.ast)">{{ formatStat(teamStats.ast) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">STL</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.stl)">{{ formatStat(teamStats.stl) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">BLK</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.blk)">{{ formatStat(teamStats.blk) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">FG%</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.fg)">{{ formatStat(teamStats.fg) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">FT%</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.ft)">{{ formatStat(teamStats.ft) }}</span>
+          </div>
+          <div class="bg-slate-900/60 p-2 rounded border border-slate-700/50">
+            <span class="text-slate-400 block text-[10px] uppercase font-bold">TO</span>
+            <span class="font-mono font-semibold" :class="getZColor(teamStats.to)">{{ formatStat(teamStats.to) }}</span>
+          </div>
+          <div class="bg-sky-950/40 p-2 rounded border border-sky-700/50">
+            <span class="text-sky-300 block text-[10px] uppercase font-bold">Total V</span>
+            <span class="font-mono font-bold text-sky-400">{{ formatStat(teamStats.total) }}</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Player Table Controls -->
+      <div class="bg-slate-800 rounded-xl border border-slate-700 shadow-xl overflow-hidden flex flex-col flex-1">
+        <div class="p-4 border-b border-slate-700 bg-slate-800/80 flex flex-wrap gap-4 items-center justify-between">
+          <div class="flex items-center gap-3 flex-1 min-w-[240px]">
+            <input 
+              v-model="searchQuery" 
+              type="text" 
+              placeholder="Search player name or position..." 
+              class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-sky-500"
+            />
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button 
+              @click="filterPos = 'ALL'" 
+              :class="filterPos === 'ALL' ? 'bg-sky-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'"
+              class="px-2.5 py-1.5 rounded text-xs font-semibold transition-colors"
+            >
+              ALL
+            </button>
+            <button 
+              v-for="pos in ['PG', 'SG', 'SF', 'PF', 'C']" 
+              :key="pos"
+              @click="filterPos = pos" 
+              :class="filterPos === pos ? 'bg-sky-600 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'"
+              class="px-2.5 py-1.5 rounded text-xs font-semibold transition-colors"
+            >
+              {{ pos }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Table View -->
+        <div class="overflow-x-auto flex-1">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead class="bg-slate-700/60 text-slate-300 uppercase font-semibold sticky top-0 z-10 backdrop-blur-md">
               <tr>
-                <th class="p-2">Name</th>
-                <th class="p-2">Pos</th>
-                <th class="p-2">Cost</th>
-                <th class="p-2">GP</th>
-                <th class="p-2">Total V</th>
-                <th class="p-2">Action</th>
+                <th class="p-3 border-b border-slate-700">Status</th>
+                <th class="p-3 border-b border-slate-700">Player</th>
+                <th class="p-3 border-b border-slate-700">Pos</th>
+                <th class="p-3 border-b border-slate-700 text-right">Cost</th>
+                <th class="p-3 border-b border-slate-700 text-right">GP</th>
+                <th class="p-3 border-b border-slate-700 text-right">PTS</th>
+                <th class="p-3 border-b border-slate-700 text-right">3PT</th>
+                <th class="p-3 border-b border-slate-700 text-right">REB</th>
+                <th class="p-3 border-b border-slate-700 text-right">AST</th>
+                <th class="p-3 border-b border-slate-700 text-right">STL</th>
+                <th class="p-3 border-b border-slate-700 text-right">BLK</th>
+                <th class="p-3 border-b border-slate-700 text-right">FG%</th>
+                <th class="p-3 border-b border-slate-700 text-right">FT%</th>
+                <th class="p-3 border-b border-slate-700 text-right">TO</th>
+                <th class="p-3 border-b border-slate-700 text-right font-bold text-sky-400">Total V</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-700">
-              <tr v-for="p in players" :key="p.Name" class="hover:bg-slate-700/30">
-                <td class="p-2 font-medium text-slate-100">{{ p.Name }}</td>
-                <td class="p-2">{{ p.Pos }}</td>
-                <td class="p-2 font-semibold text-emerald-400">${{ p.Cost }}</td>
-                <td class="p-2">{{ p.G }}</td>
-                <td class="p-2 text-sky-400 font-bold">{{ p.TotalV.toFixed(2) }}</td>
-                <td class="p-2">
-                  <button @click="toggleLock(p)" class="px-2 py-1 text-xs rounded" :class="p.locked ? 'bg-amber-600' : 'bg-sky-600'">
+            <tbody class="divide-y divide-slate-700/50">
+              <tr 
+                v-for="p in filteredPlayers" 
+                :key="p.Name"
+                :class="p.locked ? 'bg-sky-950/30' : 'hover:bg-slate-700/30'"
+                class="transition-colors"
+              >
+                <!-- Lock Action -->
+                <td class="p-3">
+                  <button 
+                    @click="toggleLock(p)" 
+                    :class="p.locked ? 'bg-emerald-600 hover:bg-emerald-500 text-white' : 'bg-slate-700 hover:bg-slate-600 text-slate-300'"
+                    class="px-2.5 py-1 rounded text-[11px] font-semibold tracking-wide transition-colors"
+                  >
                     {{ p.locked ? 'Locked' : 'Lock' }}
                   </button>
+                </td>
+
+                <!-- Player Name -->
+                <td class="p-3 font-medium text-slate-100 flex items-center gap-2">
+                  <span>{{ p.Name }}</span>
+                </td>
+
+                <!-- Positions Badge -->
+                <td class="p-3 whitespace-nowrap">
+                  <span class="inline-block bg-slate-900 text-slate-300 px-2 py-0.5 rounded border border-slate-700 text-[10px] font-mono">
+                    {{ p.Pos || 'Util' }}
+                  </span>
+                </td>
+
+                <!-- Cost -->
+                <td class="p-3 text-right font-semibold text-emerald-400">
+                  ${{ p.Cost || 1 }}
+                </td>
+
+                <!-- Games Played -->
+                <td class="p-3 text-right text-slate-400">
+                  {{ p.G || 82 }}
+                </td>
+
+                <!-- Individual 9-Cat Values -->
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'pts_v'))">
+                  {{ formatStat(getStat(p, 'pts_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'm3_v'))">
+                  {{ formatStat(getStat(p, 'm3_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'reb_v'))">
+                  {{ formatStat(getStat(p, 'reb_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'ast_v'))">
+                  {{ formatStat(getStat(p, 'ast_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'stl_v'))">
+                  {{ formatStat(getStat(p, 'stl_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'blk_v'))">
+                  {{ formatStat(getStat(p, 'blk_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'fg_v'))">
+                  {{ formatStat(getStat(p, 'fg_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'ft_v'))">
+                  {{ formatStat(getStat(p, 'ft_v')) }}
+                </td>
+                <td class="p-3 text-right font-mono" :class="getZColor(getStat(p, 'to_v'))">
+                  {{ formatStat(getStat(p, 'to_v')) }}
+                </td>
+
+                <!-- Overall Value -->
+                <td class="p-3 text-right font-mono font-bold text-sky-400">
+                  {{ formatStat(p.TotalV) }}
+                </td>
+              </tr>
+
+              <tr v-if="filteredPlayers.length === 0">
+                <td colspan="15" class="p-8 text-center text-slate-500">
+                  No players found matching your criteria.
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
-
-    </div>
+    </main>
   </div>
 
   <script>
-    const { createApp } = Vue;
+    const { createApp, ref, computed, onMounted } = Vue;
 
     createApp({
-      data() {
-        return {
-          budget: 200,
-          players: [],
-          optimalTeam: [],
-          dataLoaded: false,
-          statusMessage: 'Loading repository data...'
-        }
-      },
-      computed: {
-        lockedCost() {
-          return this.players.filter(p => p.locked).reduce((sum, p) => sum + p.Cost, 0);
-        }
-      },
-      mounted() {
-        this.loadDataJson();
-      },
-      methods: {
-        async loadDataJson() {
+      setup() {
+        const players = ref([]);
+        const searchQuery = ref('');
+        const filterPos = ref('ALL');
+        const loading = ref(false);
+
+        // Fetch data.json from repository output
+        const fetchData = async () => {
+          loading.value = true;
           try {
-            const res = await fetch('./data.json');
-            if (!res.ok) throw new Error("data.json not found");
-            const data = await res.json();
-            this.players = data;
-            this.dataLoaded = true;
-            this.statusMessage = `Loaded ${data.length} players automatically from repo`;
-          } catch (err) {
-            this.dataLoaded = false;
-            this.statusMessage = 'No data.json found. Upload CSV manually or check GitHub Action.';
-          }
-        },
-        handleFileUpload(event) {
-          const file = event.target.files[0];
-          if (!file) return;
-
-          Papa.parse(file, {
-            header: true,
-            dynamicTyping: true,
-            skipEmptyLines: true,
-            complete: (results) => {
-              this.players = results.data.map(row => ({
-                Name: row.Name || row.Player || "Unknown",
-                Pos: row.Pos || row.Position || "Util",
-                Cost: parseFloat(row['Y!Avg$'] || row.Value || 1),
-                G: parseInt(row.g || row.G || 82),
-                TotalV: parseFloat(row.V || row.Value || 0),
+            const res = await fetch('data.json?t=' + new Date().getTime());
+            if (res.ok) {
+              const data = await res.json();
+              players.value = data.map(p => ({
+                ...p,
                 locked: false
-              })).filter(p => p.Cost > 0);
-              this.dataLoaded = true;
-              this.statusMessage = `Loaded ${this.players.length} players from uploaded CSV`;
+              }));
             }
-          });
-        },
-        toggleLock(player) {
-          player.locked = !player.locked;
-          if (player.locked && !this.optimalTeam.find(p => p.Name === player.Name)) {
-            this.optimalTeam.push(player);
+          } catch (err) {
+            console.error('Failed to load data.json:', err);
+          } finally {
+            loading.value = false;
           }
-        },
-        optimizeRoster() {
-          if (typeof solver === 'undefined') return;
+        };
 
-          const model = {
-            optimize: "TotalV",
-            opType: "max",
-            constraints: {
-              Cost: { max: this.budget },
-              Players: { equal: 13 }
-            },
-            variables: {},
-            binaries: {}
+        const refreshData = () => {
+          fetchData();
+        };
+
+        // Helper to retrieve category stat safely from nested object or fallback
+        const getStat = (player, key) => {
+          if (player.Stats && typeof player.Stats[key] === 'number') {
+            return player.Stats[key];
+          }
+          return 0.0;
+        };
+
+        const formatStat = (val) => {
+          const num = Number(val) || 0;
+          return num.toFixed(2);
+        };
+
+        const getZColor = (val) => {
+          const num = Number(val) || 0;
+          if (num > 0.5) return 'text-emerald-400';
+          if (num < -0.5) return 'text-rose-400';
+          return 'text-slate-300';
+        };
+
+        const toggleLock = (player) => {
+          player.locked = !player.locked;
+        };
+
+        const lockedPlayers = computed(() => {
+          return players.value.filter(p => p.locked);
+        });
+
+        const totalSpent = computed(() => {
+          return lockedPlayers.value.reduce((acc, p) => acc + (p.Cost || 1), 0);
+        });
+
+        const remainingBudget = computed(() => {
+          return 200 - totalSpent.value;
+        });
+
+        // Cumulative sum of Z-scores for locked team
+        const teamStats = computed(() => {
+          const totals = {
+            pts: 0, m3: 0, reb: 0, ast: 0, stl: 0, blk: 0, fg: 0, ft: 0, to: 0, total: 0
           };
 
-          this.players.forEach(p => {
-            const varName = p.Name;
-            model.variables[varName] = {
-              TotalV: p.TotalV,
-              Cost: p.Cost,
-              Players: 1,
-              [varName]: 1
-            };
-            model.binaries[varName] = 1;
-
-            if (p.locked) {
-              model.constraints[varName] = { equal: 1 };
-            }
+          lockedPlayers.value.forEach(p => {
+            totals.pts += getStat(p, 'pts_v');
+            totals.m3 += getStat(p, 'm3_v');
+            totals.reb += getStat(p, 'reb_v');
+            totals.ast += getStat(p, 'ast_v');
+            totals.stl += getStat(p, 'stl_v');
+            totals.blk += getStat(p, 'blk_v');
+            totals.fg += getStat(p, 'fg_v');
+            totals.ft += getStat(p, 'ft_v');
+            totals.to += getStat(p, 'to_v');
+            totals.total += (p.TotalV || 0);
           });
 
-          const results = solver.Solve(model);
-          this.optimalTeam = this.players.filter(p => results[p.Name] === 1);
-        }
+          return totals;
+        });
+
+        const filteredPlayers = computed(() => {
+          return players.value.filter(p => {
+            // Name search
+            const matchQuery = p.Name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+                              (p.Pos && p.Pos.toLowerCase().includes(searchQuery.value.toLowerCase()));
+            
+            // Position pill filter
+            let matchPos = true;
+            if (filterPos.value !== 'ALL') {
+              matchPos = p.Pos && p.Pos.includes(filterPos.value);
+            }
+
+            return matchQuery && matchPos;
+          });
+        });
+
+        onMounted(() => {
+          fetchData();
+        });
+
+        return {
+          players,
+          searchQuery,
+          filterPos,
+          loading,
+          lockedPlayers,
+          totalSpent,
+          remainingBudget,
+          teamStats,
+          filteredPlayers,
+          toggleLock,
+          refreshData,
+          getStat,
+          formatStat,
+          getZColor
+        };
       }
     }).mount('#app');
   </script>
