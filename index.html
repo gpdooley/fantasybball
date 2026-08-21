@@ -4,38 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>9-Cat Fantasy Basketball Roto Optimizer</title>
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- PapaParse for CSV parsing -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-  <!-- Client-side Linear Programming Solver -->
   <script src="https://cdn.jsdelivr.net/npm/javascript-lp-solver@0.4.24/prod/Solver.min.js"></script>
-  <!-- Vue 3 CDN -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen p-6">
   <div id="app" class="max-w-7xl mx-auto space-y-6">
     
-    <!-- Header & File Upload -->
+    <!-- Header -->
     <header class="flex justify-between items-center bg-slate-800 p-6 rounded-xl border border-slate-700">
       <div>
         <h1 class="text-2xl font-bold text-sky-400">9-Cat Roto Team Optimizer</h1>
-        <p class="text-slate-400 text-sm">Upload Basketball Monster CSV export to calculate the optimal $200 roster.</p>
+        <p class="text-slate-400 text-sm">
+          Data Status: 
+          <span :class="dataLoaded ? 'text-emerald-400 font-semibold' : 'text-amber-400'">
+            {{ statusMessage }}
+          </span>
+        </p>
       </div>
-      <div>
-        <label class="bg-sky-600 hover:bg-sky-500 text-white font-medium px-4 py-2 rounded-lg cursor-pointer transition">
-          Upload BM CSV
+      <div class="flex gap-3">
+        <button @click="loadDataJson" class="bg-slate-700 hover:bg-slate-600 text-white font-medium px-4 py-2 rounded-lg transition text-sm">
+          Refresh Data
+        </button>
+        <label class="bg-sky-600 hover:bg-sky-500 text-white font-medium px-4 py-2 rounded-lg cursor-pointer transition text-sm">
+          Upload Custom CSV
           <input type="file" @change="handleFileUpload" accept=".csv" class="hidden" />
         </label>
       </div>
     </header>
 
-    <!-- Main Grid Layout -->
+    <!-- Main Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       
-      <!-- Left Column: Controls & Locked Roster -->
+      <!-- Left Column: Controls & Selected Team -->
       <div class="space-y-6">
-        <!-- Budget & Controls Card -->
         <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-4">
           <h2 class="text-lg font-semibold text-slate-200">Optimization Settings</h2>
           <div class="flex justify-between text-sm">
@@ -47,7 +50,7 @@
             <span class="font-bold text-amber-400">${{ lockedCost }}</span>
           </div>
           <div class="flex justify-between text-sm">
-            <span>Remaining Budget:</span>
+            <span>Remaining:</span>
             <span class="font-bold text-sky-400">${{ budget - lockedCost }}</span>
           </div>
 
@@ -55,15 +58,14 @@
             @click="optimizeRoster" 
             :disabled="players.length === 0"
             class="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 text-white font-semibold py-2.5 rounded-lg transition">
-            Optimize Roster
+            Optimize Optimal Roster
           </button>
         </div>
 
-        <!-- Optimal / Selected Roster -->
         <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-3">
           <h2 class="text-lg font-semibold text-slate-200">Selected Team ({{ optimalTeam.length }}/13)</h2>
           <div v-if="optimalTeam.length === 0" class="text-slate-500 text-sm italic">
-            Upload CSV and click Optimize to generate team.
+            Click Optimize to build the best $200 team.
           </div>
           <ul class="space-y-2 text-sm max-h-[400px] overflow-y-auto">
             <li v-for="p in optimalTeam" :key="p.Name" class="flex justify-between items-center bg-slate-700/50 p-2 rounded">
@@ -86,9 +88,9 @@
       <div class="lg:col-span-2 bg-slate-800 p-5 rounded-xl border border-slate-700 flex flex-col">
         <h2 class="text-lg font-semibold text-slate-200 mb-4">Player Pool ({{ players.length }})</h2>
         
-        <div class="overflow-x-auto flex-1">
+        <div class="overflow-x-auto flex-1 max-h-[600px]">
           <table class="w-full text-left text-xs text-slate-300">
-            <thead class="bg-slate-700/50 text-slate-400 uppercase">
+            <thead class="bg-slate-700/50 text-slate-400 uppercase sticky top-0 bg-slate-800">
               <tr>
                 <th class="p-2">Name</th>
                 <th class="p-2">Pos</th>
@@ -128,6 +130,8 @@
           budget: 200,
           players: [],
           optimalTeam: [],
+          dataLoaded: false,
+          statusMessage: 'Loading repository data...'
         }
       },
       computed: {
@@ -135,7 +139,23 @@
           return this.players.filter(p => p.locked).reduce((sum, p) => sum + p.Cost, 0);
         }
       },
+      mounted() {
+        this.loadDataJson();
+      },
       methods: {
+        async loadDataJson() {
+          try {
+            const res = await fetch('./data.json');
+            if (!res.ok) throw new Error("data.json not found");
+            const data = await res.json();
+            this.players = data;
+            this.dataLoaded = true;
+            this.statusMessage = `Loaded ${data.length} players automatically from repo`;
+          } catch (err) {
+            this.dataLoaded = false;
+            this.statusMessage = 'No data.json found. Upload CSV manually or check GitHub Action.';
+          }
+        },
         handleFileUpload(event) {
           const file = event.target.files[0];
           if (!file) return;
@@ -153,6 +173,8 @@
                 TotalV: parseFloat(row.V || row.Value || 0),
                 locked: false
               })).filter(p => p.Cost > 0);
+              this.dataLoaded = true;
+              this.statusMessage = `Loaded ${this.players.length} players from uploaded CSV`;
             }
           });
         },
@@ -186,14 +208,12 @@
             };
             model.binaries[varName] = 1;
 
-            // Force lock constraint
             if (p.locked) {
               model.constraints[varName] = { equal: 1 };
             }
           });
 
           const results = solver.Solve(model);
-          
           this.optimalTeam = this.players.filter(p => results[p.Name] === 1);
         }
       }
