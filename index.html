@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>9-Cat Fantasy Basketball Roto Optimizer</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <!-- Client-side Linear Programming Solver -->
+  <script src="https://cdn.jsdelivr.net/npm/javascript-lp-solver@0.4.24/prod/Solver.min.js"></script>
+  <!-- Vue 3 CDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-6">
+  <div id="app" class="max-w-7xl mx-auto space-y-6">
+    
+    <!-- Header & File Upload -->
+    <header class="flex justify-between items-center bg-slate-800 p-6 rounded-xl border border-slate-700">
+      <div>
+        <h1 class="text-2xl font-bold text-sky-400">9-Cat Roto Team Optimizer</h1>
+        <p class="text-slate-400 text-sm">Upload Basketball Monster CSV export to calculate the optimal $200 roster.</p>
+      </div>
+      <div>
+        <label class="bg-sky-600 hover:bg-sky-500 text-white font-medium px-4 py-2 rounded-lg cursor-pointer transition">
+          Upload BM CSV
+          <input type="file" @change="handleFileUpload" accept=".csv" class="hidden" />
+        </label>
+      </div>
+    </header>
+
+    <!-- Main Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Left Column: Controls & Locked Roster -->
+      <div class="space-y-6">
+        <!-- Budget & Controls Card -->
+        <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-4">
+          <h2 class="text-lg font-semibold text-slate-200">Optimization Settings</h2>
+          <div class="flex justify-between text-sm">
+            <span>Budget Limit:</span>
+            <span class="font-bold text-emerald-400">${{ budget }}</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span>Spent (Locked):</span>
+            <span class="font-bold text-amber-400">${{ lockedCost }}</span>
+          </div>
+          <div class="flex justify-between text-sm">
+            <span>Remaining Budget:</span>
+            <span class="font-bold text-sky-400">${{ budget - lockedCost }}</span>
+          </div>
+
+          <button 
+            @click="optimizeRoster" 
+            :disabled="players.length === 0"
+            class="w-full bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-700 text-white font-semibold py-2.5 rounded-lg transition">
+            Optimize Roster
+          </button>
+        </div>
+
+        <!-- Optimal / Selected Roster -->
+        <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-3">
+          <h2 class="text-lg font-semibold text-slate-200">Selected Team ({{ optimalTeam.length }}/13)</h2>
+          <div v-if="optimalTeam.length === 0" class="text-slate-500 text-sm italic">
+            Upload CSV and click Optimize to generate team.
+          </div>
+          <ul class="space-y-2 text-sm max-h-[400px] overflow-y-auto">
+            <li v-for="p in optimalTeam" :key="p.Name" class="flex justify-between items-center bg-slate-700/50 p-2 rounded">
+              <div>
+                <span class="font-medium">{{ p.Name }}</span>
+                <span class="text-xs text-slate-400 block">{{ p.Pos }} | {{ p.G }} GP</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="font-semibold text-emerald-400">${{ p.Cost }}</span>
+                <button @click="toggleLock(p)" class="text-xs px-2 py-1 rounded" :class="p.locked ? 'bg-amber-600' : 'bg-slate-600'">
+                  {{ p.locked ? 'Unlock' : 'Lock' }}
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column: Player Data Table -->
+      <div class="lg:col-span-2 bg-slate-800 p-5 rounded-xl border border-slate-700 flex flex-col">
+        <h2 class="text-lg font-semibold text-slate-200 mb-4">Player Pool ({{ players.length }})</h2>
+        
+        <div class="overflow-x-auto flex-1">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-700/50 text-slate-400 uppercase">
+              <tr>
+                <th class="p-2">Name</th>
+                <th class="p-2">Pos</th>
+                <th class="p-2">Cost</th>
+                <th class="p-2">GP</th>
+                <th class="p-2">Total V</th>
+                <th class="p-2">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-700">
+              <tr v-for="p in players" :key="p.Name" class="hover:bg-slate-700/30">
+                <td class="p-2 font-medium text-slate-100">{{ p.Name }}</td>
+                <td class="p-2">{{ p.Pos }}</td>
+                <td class="p-2 font-semibold text-emerald-400">${{ p.Cost }}</td>
+                <td class="p-2">{{ p.G }}</td>
+                <td class="p-2 text-sky-400 font-bold">{{ p.TotalV.toFixed(2) }}</td>
+                <td class="p-2">
+                  <button @click="toggleLock(p)" class="px-2 py-1 text-xs rounded" :class="p.locked ? 'bg-amber-600' : 'bg-sky-600'">
+                    {{ p.locked ? 'Locked' : 'Lock' }}
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          budget: 200,
+          players: [],
+          optimalTeam: [],
+        }
+      },
+      computed: {
+        lockedCost() {
+          return this.players.filter(p => p.locked).reduce((sum, p) => sum + p.Cost, 0);
+        }
+      },
+      methods: {
+        handleFileUpload(event) {
+          const file = event.target.files[0];
+          if (!file) return;
+
+          Papa.parse(file, {
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true,
+            complete: (results) => {
+              this.players = results.data.map(row => ({
+                Name: row.Name || row.Player || "Unknown",
+                Pos: row.Pos || row.Position || "Util",
+                Cost: parseFloat(row['Y!Avg$'] || row.Value || 1),
+                G: parseInt(row.g || row.G || 82),
+                TotalV: parseFloat(row.V || row.Value || 0),
+                locked: false
+              })).filter(p => p.Cost > 0);
+            }
+          });
+        },
+        toggleLock(player) {
+          player.locked = !player.locked;
+          if (player.locked && !this.optimalTeam.find(p => p.Name === player.Name)) {
+            this.optimalTeam.push(player);
+          }
+        },
+        optimizeRoster() {
+          if (typeof solver === 'undefined') return;
+
+          const model = {
+            optimize: "TotalV",
+            opType: "max",
+            constraints: {
+              Cost: { max: this.budget },
+              Players: { equal: 13 }
+            },
+            variables: {},
+            binaries: {}
+          };
+
+          this.players.forEach(p => {
+            const varName = p.Name;
+            model.variables[varName] = {
+              TotalV: p.TotalV,
+              Cost: p.Cost,
+              Players: 1,
+              [varName]: 1
+            };
+            model.binaries[varName] = 1;
+
+            // Force lock constraint
+            if (p.locked) {
+              model.constraints[varName] = { equal: 1 };
+            }
+          });
+
+          const results = solver.Solve(model);
+          
+          this.optimalTeam = this.players.filter(p => results[p.Name] === 1);
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
