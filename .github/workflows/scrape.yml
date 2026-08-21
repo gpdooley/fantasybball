@@ -6,6 +6,9 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch: # Allows manual trigger button in GitHub UI
 
+permissions:
+  contents: write # Grants the workflow permission to commit and push data.json
+
 jobs:
   scrape-and-commit:
     runs-on: ubuntu-latest
