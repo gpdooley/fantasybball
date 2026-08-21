@@ -11,28 +11,37 @@ async def run():
         )
         page = await context.new_page()
 
-        print("Navigating to Basketball Monster...")
+        print("Navigating to Basketball Monster Rankings...")
         await page.goto("https://basketballmonster.com/PlayerRankings.aspx", wait_until="networkidle", timeout=30000)
 
-        # Wait for main table container
-        await page.wait_for_selector("table", timeout=15000)
-
-        # Attempt to configure settings for Yahoo Auction & Z-Scores if drop-downs exist
+        # 1. Configure Basketball Monster Form Controls for Yahoo Auction & Z-Scores
         try:
-            # Check for value type select (e.g. Per Game, Total, Auction)
-            value_select = await page.query_selector("select[id*='ValueType'], select[id*='Value']")
-            if value_select:
-                await value_select.select_option(index=0) # Value/Z-Score mode
-            
-            # Click Refresh/Filter button if present on page
-            refresh_btn = await page.query_selector("input[type='submit'][value*='Filter'], input[type='submit'][value*='Refresh']")
-            if refresh_btn:
-                await refresh_btn.click()
+            # Look for Value Type dropdown (Per Game / Value / Total)
+            value_dropdown = page.locator("select[id*='ValueType']").first
+            if await value_dropdown.count() > 0:
+                await value_dropdown.select_option(label="Value") # Force Z-scores
+
+            # Look for Provider/Auction source dropdown
+            provider_dropdown = page.locator("select[id*='Source'], select[id*='Provider']").first
+            if await provider_dropdown.count() > 0:
+                # Attempt to select Yahoo if present
+                try:
+                    await provider_dropdown.select_option(label="Yahoo")
+                except:
+                    pass
+
+            # Click the Filter / Refresh button to force grid reload
+            filter_btn = page.locator("input[type='submit'][value*='Filter'], button:has-text('Filter')").first
+            if await filter_btn.count() > 0:
+                await filter_btn.click()
                 await page.wait_for_load_state("networkidle")
         except Exception as e:
-            print(f"Option selection skipped or failed: {e}")
+            print(f"Form configuration notice: {e}")
 
-        # Locate table
+        # Wait for data table
+        await page.wait_for_selector("table", timeout=15000)
+
+        # Locate the main data grid
         tables = await page.query_selector_all("table")
         target_table = None
         for t in tables:
@@ -46,130 +55,103 @@ async def run():
             await browser.close()
             return
 
-        # Parse Headers dynamically to map column indices exactly
-        header_map = {}
         rows = await target_table.query_selector_all("tr")
-        
-        header_row = None
-        for r in rows:
-            ths = await r.query_selector_all("th")
-            if len(ths) > 3:
-                header_row = ths
-                break
-            tds = await r.query_selector_all("td")
-            # If th wasn't used, check for a header row wrapped in td
-            if len(tds) > 5 and "PLAYER" in (await tds[1].inner_text()).upper():
-                header_row = tds
-                break
-
-        if header_row:
-            for idx, cell in enumerate(header_row):
-                header_text = (await cell.inner_text()).strip().upper().replace("\N{DEGREE SIGN}", "").replace("\n", " ")
-                header_map[header_text] = idx
-
-        print("Mapped Headers:", header_map)
-
         players = []
 
         for row in rows:
             cols = await row.query_selector_all("td")
-            if not cols or len(cols) < 5:
+            if not cols or len(cols) < 8:
                 continue
 
+            # Extract cell text and anchor links
             cell_texts = [(await c.inner_text()).strip() for c in cols]
             row_str = " ".join(cell_texts).upper()
 
             if "PLAYER" in row_str or "RANK" in row_str or "TEAMS" in row_str:
                 continue
 
-            # Player Name
+            # 2. Extract Name & Positions cleanly from links and spans
             name_elem = await row.query_selector("a")
-            name = (await name_elem.inner_text()).strip() if name_elem else cell_texts[1] if len(cell_texts) > 1 else ""
-
+            if not name_elem:
+                continue
+            name = (await name_elem.inner_text()).strip()
             if not name or name.upper() in ["PLAYER", "NAME", "RANK"]:
                 continue
 
-            # Position Extraction: Look for explicit position tags (PG, SG, SF, PF, C)
+            # Positions: BBM usually puts positions inside a specific span or adjacent cell
             pos = "Util"
-            for txt in cell_texts:
-                clean_p = txt.upper().replace(" ", "")
-                if any(p in clean_p for p in ["PG", "SG", "SF", "PF", "C"]) and len(clean_p) <= 12 and not any(char.isdigit() for char in clean_p):
-                    # Filter out team codes like LAC or OKC unless they contain a position
-                    if clean_p not in ["OKC", "LAC", "CLE", "BOS", "PHI", "LAL", "GSW"]:
-                        pos = txt
-                        break
+            # Inspect row HTML for standard position patterns
+            row_html = await row.inner_html()
+            positions_found = []
+            for p_code in ["PG", "SG", "SF", "PF", "C"]:
+                # Match standalone position tags in HTML or text
+                if f" {p_code} " in f" {row_str} " or f">{p_code}<" in row_html or f"/{p_code}" in row_html or f"{p_code}/" in row_html:
+                    positions_found.append(p_code)
+            
+            if positions_found:
+                # Preserve unique positions order
+                pos = "/".join(dict.fromkeys(positions_found))
 
-            # Cost Extraction
+            # 3. Cost Extraction: Look explicitly for auction dollar values ($)
             cost = 1.0
-            # Search for dollar amounts in cell texts
             for txt in cell_texts:
                 if "$" in txt:
+                    clean = txt.replace("$", "").strip()
                     try:
-                        cost = float(txt.replace("$", "").strip())
-                        break
+                        cost_val = float(clean)
+                        if cost_val > 0:
+                            cost = cost_val
+                            break
                     except ValueError:
                         pass
 
-            # Safe numeric parser helper
-            def get_col_val(possible_keys, default=0.0):
-                for k in possible_keys:
-                    for h_text, idx in header_map.items():
-                        if k in h_text and idx < len(cell_texts):
-                            try:
-                                val_str = cell_texts[idx].replace("$", "").replace("%", "").strip()
-                                return float(val_str)
-                            except ValueError:
-                                pass
-                return default
+            # 4. Extract Z-Scores safely
+            # Identify numeric values in row, ignoring Rank and GP
+            floats = []
+            for txt in cell_texts:
+                clean = txt.replace("$", "").replace("%", "").replace(",", "").strip()
+                try:
+                    floats.append(float(clean))
+                except ValueError:
+                    continue
 
-            # Games Played
-            games = int(get_col_val(["g", "gp", "games"], 82))
+            # Filter out obvious Rank (1, 2, 3...) and GP (60-82) to get true stat values
+            # BBM Stat columns in Value mode: TotalV, PTS, 3PT, REB, AST, STL, BLK, FG%, FT%, TO
+            stat_floats = [f for f in floats if not (f.is_integer() and 1 <= f <= 82 and f == floats[0])]
 
-            # Stat V-Scores / Values
-            total_v = get_col_val(["round", "value", "v", "tot"], 0.0)
-            pts_v   = get_col_val(["pts"], 0.0)
-            m3_v    = get_col_val(["3pt", "3p", "m3"], 0.0)
-            reb_v   = get_col_val(["reb", "rebounds"], 0.0)
-            ast_v   = get_col_val(["ast", "assists"], 0.0)
-            stl_v   = get_col_val(["stl", "steals"], 0.0)
-            blk_v   = get_col_val(["blk", "blocks"], 0.0)
-            fg_v    = get_col_val(["fg%", "fg"], 0.0)
-            ft_v    = get_col_val(["ft%", "ft"], 0.0)
-            to_v    = get_col_val(["to", "turnovers"], 0.0)
+            total_v = stat_floats[0] if len(stat_floats) > 0 else 0.0
 
-            # Fallback for stats if header map failed
-            if total_v == 0.0 and len(cell_texts) > 10:
-                nums = []
-                for t in cell_texts:
-                    try:
-                        nums.append(float(t.replace("$", "").replace("%", "").strip()))
-                    except ValueError:
-                        pass
-                if len(nums) >= 10:
-                    total_v = nums[0]
-                    pts_v, m3_v, reb_v, ast_v, stl_v, blk_v, fg_v, ft_v, to_v = nums[1:10]
+            # Map category Z-Scores
+            cat_v = {
+                "pts_v": stat_floats[1] if len(stat_floats) > 1 else 0.0,
+                "m3_v":  stat_floats[2] if len(stat_floats) > 2 else 0.0,
+                "reb_v": stat_floats[3] if len(stat_floats) > 3 else 0.0,
+                "ast_v": stat_floats[4] if len(stat_floats) > 4 else 0.0,
+                "stl_v": stat_floats[5] if len(stat_floats) > 5 else 0.0,
+                "blk_v": stat_floats[6] if len(stat_floats) > 6 else 0.0,
+                "fg_v":  stat_floats[7] if len(stat_floats) > 7 else 0.0,
+                "ft_v":  stat_floats[8] if len(stat_floats) > 8 else 0.0,
+                "to_v":  stat_floats[9] if len(stat_floats) > 9 else 0.0,
+            }
+
+            # Find Games Played
+            games = 82
+            for f in floats:
+                if f.is_integer() and 40 <= f <= 82:
+                    games = int(f)
+                    break
 
             players.append({
                 "Name": name,
                 "Pos": pos,
                 "Cost": max(1.0, cost),
-                "G": games if games > 0 else 82,
+                "G": games,
                 "TotalV": total_v,
-                "Stats": {
-                    "pts_v": pts_v,
-                    "m3_v": m3_v,
-                    "reb_v": reb_v,
-                    "ast_v": ast_v,
-                    "stl_v": stl_v,
-                    "blk_v": blk_v,
-                    "fg_v": fg_v,
-                    "ft_v": ft_v,
-                    "to_v": to_v
-                },
+                "Stats": cat_v,
                 "locked": False
             })
 
-        print(f"Scraped {len(players)} players with header mapping.")
+        print(f"Successfully scraped {len(players)} players.")
 
         await browser.close()
 
