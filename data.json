@@ -1,0 +1,2034 @@
+[
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "1",
+    "Pos": "1.12",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "2",
+    "Pos": "0.99",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "3",
+    "Pos": "0.89",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "4",
+    "Pos": "0.75",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "5",
+    "Pos": "0.73",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "6",
+    "Pos": "0.63",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "7",
+    "Pos": "0.45",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "8",
+    "Pos": "0.44",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "9",
+    "Pos": "0.43",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "10",
+    "Pos": "0.43",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "11",
+    "Pos": "0.39",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "12",
+    "Pos": "0.37",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "13",
+    "Pos": "0.36",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "14",
+    "Pos": "0.35",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "15",
+    "Pos": "0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "16",
+    "Pos": "0.32",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "17",
+    "Pos": "0.32",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "18",
+    "Pos": "0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "19",
+    "Pos": "0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "20",
+    "Pos": "0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "21",
+    "Pos": "0.29",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "22",
+    "Pos": "0.28",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "23",
+    "Pos": "0.26",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "24",
+    "Pos": "0.26",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "25",
+    "Pos": "0.25",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "26",
+    "Pos": "0.22",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "27",
+    "Pos": "0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "28",
+    "Pos": "0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "29",
+    "Pos": "0.20",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "30",
+    "Pos": "0.17",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "31",
+    "Pos": "0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "32",
+    "Pos": "0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "33",
+    "Pos": "0.14",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "34",
+    "Pos": "0.14",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "35",
+    "Pos": "0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "36",
+    "Pos": "0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "37",
+    "Pos": "0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "38",
+    "Pos": "0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "39",
+    "Pos": "0.12",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "40",
+    "Pos": "0.12",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "41",
+    "Pos": "0.11",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "42",
+    "Pos": "0.11",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "43",
+    "Pos": "0.10",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "44",
+    "Pos": "0.09",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "45",
+    "Pos": "0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "46",
+    "Pos": "0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "47",
+    "Pos": "0.06",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "48",
+    "Pos": "0.05",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "49",
+    "Pos": "0.05",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "50",
+    "Pos": "0.05",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "51",
+    "Pos": "0.05",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "52",
+    "Pos": "0.05",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "53",
+    "Pos": "0.04",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "54",
+    "Pos": "0.04",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "55",
+    "Pos": "0.04",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "56",
+    "Pos": "0.02",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "57",
+    "Pos": "0.02",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "58",
+    "Pos": "0.01",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "59",
+    "Pos": "0.01",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "60",
+    "Pos": "0.01",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "61",
+    "Pos": "0.01",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "62",
+    "Pos": "0.00",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "63",
+    "Pos": "0.00",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "64",
+    "Pos": "-0.01",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "65",
+    "Pos": "-0.01",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "66",
+    "Pos": "-0.01",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "67",
+    "Pos": "-0.02",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "68",
+    "Pos": "-0.02",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "69",
+    "Pos": "-0.02",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "70",
+    "Pos": "-0.02",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "71",
+    "Pos": "-0.04",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "72",
+    "Pos": "-0.05",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "73",
+    "Pos": "-0.06",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "74",
+    "Pos": "-0.06",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "75",
+    "Pos": "-0.06",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "76",
+    "Pos": "-0.06",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "77",
+    "Pos": "-0.06",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "78",
+    "Pos": "-0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "79",
+    "Pos": "-0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "80",
+    "Pos": "-0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "81",
+    "Pos": "-0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "82",
+    "Pos": "-0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "83",
+    "Pos": "-0.07",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "84",
+    "Pos": "-0.08",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "85",
+    "Pos": "-0.08",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "86",
+    "Pos": "-0.08",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "87",
+    "Pos": "-0.09",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "88",
+    "Pos": "-0.09",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "89",
+    "Pos": "-0.09",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "90",
+    "Pos": "-0.09",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "91",
+    "Pos": "-0.10",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "92",
+    "Pos": "-0.12",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "93",
+    "Pos": "-0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "94",
+    "Pos": "-0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "95",
+    "Pos": "-0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "96",
+    "Pos": "-0.13",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "97",
+    "Pos": "-0.14",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "98",
+    "Pos": "-0.14",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "99",
+    "Pos": "-0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "100",
+    "Pos": "-0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "101",
+    "Pos": "-0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "102",
+    "Pos": "-0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "103",
+    "Pos": "-0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "104",
+    "Pos": "-0.15",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "105",
+    "Pos": "-0.16",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "106",
+    "Pos": "-0.16",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "107",
+    "Pos": "-0.16",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "108",
+    "Pos": "-0.16",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "109",
+    "Pos": "-0.16",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "110",
+    "Pos": "-0.16",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "111",
+    "Pos": "-0.17",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "112",
+    "Pos": "-0.17",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "113",
+    "Pos": "-0.17",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "114",
+    "Pos": "-0.17",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "115",
+    "Pos": "-0.18",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "116",
+    "Pos": "-0.18",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "117",
+    "Pos": "-0.19",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "118",
+    "Pos": "-0.19",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "119",
+    "Pos": "-0.20",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "120",
+    "Pos": "-0.20",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "121",
+    "Pos": "-0.20",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "122",
+    "Pos": "-0.20",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "123",
+    "Pos": "-0.20",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "124",
+    "Pos": "-0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "125",
+    "Pos": "-0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "126",
+    "Pos": "-0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "127",
+    "Pos": "-0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "128",
+    "Pos": "-0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "129",
+    "Pos": "-0.21",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "130",
+    "Pos": "-0.22",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "131",
+    "Pos": "-0.22",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "132",
+    "Pos": "-0.22",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "133",
+    "Pos": "-0.22",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "134",
+    "Pos": "-0.22",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "135",
+    "Pos": "-0.23",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "136",
+    "Pos": "-0.24",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "137",
+    "Pos": "-0.24",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "138",
+    "Pos": "-0.24",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "139",
+    "Pos": "-0.24",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "140",
+    "Pos": "-0.25",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "141",
+    "Pos": "-0.25",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "142",
+    "Pos": "-0.25",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "143",
+    "Pos": "-0.26",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "144",
+    "Pos": "-0.26",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "145",
+    "Pos": "-0.26",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "146",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "147",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "148",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "149",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "150",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "151",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "152",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "153",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "154",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "155",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "156",
+    "Pos": "-0.27",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "157",
+    "Pos": "-0.28",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "158",
+    "Pos": "-0.28",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "159",
+    "Pos": "-0.28",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "160",
+    "Pos": "-0.28",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "161",
+    "Pos": "-0.28",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "162",
+    "Pos": "-0.29",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "163",
+    "Pos": "-0.29",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "164",
+    "Pos": "-0.29",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "165",
+    "Pos": "-0.29",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "166",
+    "Pos": "-0.29",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "167",
+    "Pos": "-0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "168",
+    "Pos": "-0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "169",
+    "Pos": "-0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "170",
+    "Pos": "-0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "171",
+    "Pos": "-0.30",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "172",
+    "Pos": "-0.31",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "173",
+    "Pos": "-0.31",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "174",
+    "Pos": "-0.31",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "175",
+    "Pos": "-0.31",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "176",
+    "Pos": "-0.31",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "177",
+    "Pos": "-0.31",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "178",
+    "Pos": "-0.32",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "179",
+    "Pos": "-0.32",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "180",
+    "Pos": "-0.32",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "181",
+    "Pos": "-0.33",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "182",
+    "Pos": "-0.33",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "183",
+    "Pos": "-0.33",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "184",
+    "Pos": "-0.33",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "185",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "186",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "187",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "188",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "189",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "190",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "191",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "192",
+    "Pos": "-0.34",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "193",
+    "Pos": "-0.35",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "194",
+    "Pos": "-0.35",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "195",
+    "Pos": "-0.36",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "196",
+    "Pos": "-0.36",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "197",
+    "Pos": "-0.36",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "198",
+    "Pos": "-0.37",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "199",
+    "Pos": "-0.37",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "200",
+    "Pos": "-0.37",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "201",
+    "Pos": "-0.37",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "202",
+    "Pos": "-0.37",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "203",
+    "Pos": "-0.38",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "204",
+    "Pos": "-0.38",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "205",
+    "Pos": "-0.38",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "206",
+    "Pos": "-0.38",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "207",
+    "Pos": "-0.39",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "208",
+    "Pos": "-0.39",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "209",
+    "Pos": "-0.39",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "210",
+    "Pos": "-0.39",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "211",
+    "Pos": "-0.39",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "212",
+    "Pos": "-0.39",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "213",
+    "Pos": "-0.40",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "214",
+    "Pos": "-0.40",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "215",
+    "Pos": "-0.40",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "216",
+    "Pos": "-0.41",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "217",
+    "Pos": "-0.41",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "218",
+    "Pos": "-0.41",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "219",
+    "Pos": "-0.41",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "220",
+    "Pos": "-0.41",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "221",
+    "Pos": "-0.42",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "222",
+    "Pos": "-0.42",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "223",
+    "Pos": "-0.42",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "224",
+    "Pos": "-0.42",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "225",
+    "Pos": "-0.42",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "226",
+    "Pos": "-0.42",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "227",
+    "Pos": "-0.42",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "228",
+    "Pos": "-0.43",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "Rank",
+    "Pos": "Value",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "229",
+    "Pos": "-0.43",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "230",
+    "Pos": "-0.43",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "231",
+    "Pos": "-0.43",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "232",
+    "Pos": "-0.44",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "233",
+    "Pos": "-0.44",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  },
+  {
+    "Name": "234",
+    "Pos": "-0.44",
+    "Cost": 1.0,
+    "G": 82,
+    "TotalV": 0.0,
+    "locked": false
+  }
+]
