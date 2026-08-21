@@ -1,95 +1,90 @@
 import json
-import requests
-from bs4 import BeautifulSoup
+import asyncio
+from playwright.async_api import async_playwright
 
-def scrape_basketball_monster():
-    # URL configured for 9-cat, Yahoo default settings, top players
-    url = "https://basketballmonster.com/PlayerRankings.aspx"
-    
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.5",
-    }
-
-    try:
-        response = requests.get(url, headers=headers, timeout=15)
-        print(f"HTTP Status Code: {response.status_code}")
+async def run():
+    async with async_playwright() as p:
+        # Launch headless browser
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
         
-        if response.status_code != 200:
-            print(f"Failed to fetch page. Status code: {response.status_code}")
-            save_empty_json()
-            return
-
-        soup = BeautifulSoup(response.text, "html.parser")
+        # Navigate to Basketball Monster Player Rankings
+        print("Navigating to Basketball Monster...")
+        await page.goto("https://basketballmonster.com/PlayerRankings.aspx", wait_until="networkidle")
         
-        # Locate main grid table
-        table = soup.find("table", {"id": "datatable"}) or soup.find("table", {"class": "grid"}) or soup.find("table")
+        # Wait for the main datatable to load
+        await page.wait_for_selector("#datatable", timeout=15000)
         
-        if not table:
-            print("Could not locate player table in HTML output.")
-            save_empty_json()
-            return
-
+        # Extract rows
+        rows = await page.query_selector_all("#datatable tr")
         players = []
-        rows = table.find_all("tr")
-
+        
         for row in rows:
-            cols = row.find_all(["td", "th"])
-            
-            # Skip short or non-data rows
-            if len(cols) < 6:
+            # Check if this is a header or filter row
+            is_header = await row.query_selector("th")
+            if is_header:
                 continue
 
-            # Skip header or control rows
-            row_text = row.text.lower()
-            if "rank" in row_text or "player" in row_text or "value" in row_text:
+            cols = await row.query_selector_all("td")
+            if len(cols) < 12:
                 continue
 
             try:
-                # Find player link or text (BM puts player links in specific anchor tags)
-                name_elem = row.find("a", href=lambda h: h and "player" in h.lower())
+                # Extract text contents across cells
+                cell_texts = [await c.inner_text() for c in cols]
+                
+                # Player Name
+                name_elem = await row.query_selector("a")
                 if not name_elem:
                     continue
-                name = name_elem.text.strip()
+                name = (await name_elem.inner_text()).strip()
+                if not name or name.lower() in ["player", "name"]:
+                    continue
 
-                # Search through column cells to find Position, Cost, Games, and Value
-                cell_texts = [c.text.strip() for c in cols]
+                # Position (usually col index 2 or 3)
+                pos = cell_texts[2].strip() if len(cell_texts) > 2 else "Util"
+                
+                # Games Played
+                g_text = cell_texts[3].strip() if len(cell_texts) > 3 else "82"
+                games = int(g_text) if g_text.isdigit() else 82
 
-                # Position cell (contains PG, SG, SF, PF, C)
-                pos = "Util"
-                for text in cell_texts:
-                    if any(p in text for p in ["PG", "SG", "SF", "PF", "C"]):
-                        pos = text
-                        break
-
-                # Extract dollar cost (look for '$' or Yahoo auction price column)
+                # Yahoo Auction Price (Y!Avg$)
                 cost = 1.0
-                for text in cell_texts:
-                    if text.startswith("$"):
+                for txt in cell_texts:
+                    if "$" in txt:
                         try:
-                            cost = float(text.replace("$", "").strip())
+                            cost = float(txt.replace("$", "").strip())
                             break
                         except ValueError:
                             pass
 
-                # Extract games played
-                games = 82
-                for text in cell_texts[3:8]:
-                    if text.isdigit() and 1 <= int(text) <= 82:
-                        games = int(text)
-                        break
-
-                # Extract overall total V value (usually a decimal like 8.42 or 0.75)
-                total_v = 0.0
-                for text in cell_texts[4:10]:
+                # Parse individual 9-cat _V stat scores
+                # Basketball Monster typically orders them: TotalV, Value, PTS, 3PT, REB, AST, STL, BLK, FG%, FT%, TO
+                # We map available numeric float cells:
+                floats = []
+                for txt in cell_texts:
+                    clean_txt = txt.replace("$", "").strip()
                     try:
-                        val = float(text)
-                        if -10.0 <= val <= 25.0:
-                            total_v = val
-                            break
+                        val = float(clean_txt)
+                        floats.append(val)
                     except ValueError:
                         continue
+
+                # Fallback assignment for stats if enough numeric columns exist
+                total_v = floats[0] if len(floats) > 0 else 0.0
+                
+                # Category V-values
+                cat_v = {
+                    "pts_v": floats[1] if len(floats) > 1 else 0.0,
+                    "m3_v":  floats[2] if len(floats) > 2 else 0.0,
+                    "reb_v": floats[3] if len(floats) > 3 else 0.0,
+                    "ast_v": floats[4] if len(floats) > 4 else 0.0,
+                    "stl_v": floats[5] if len(floats) > 5 else 0.0,
+                    "blk_v": floats[6] if len(floats) > 6 else 0.0,
+                    "fg_v":  floats[7] if len(floats) > 7 else 0.0,
+                    "ft_v":  floats[8] if len(floats) > 8 else 0.0,
+                    "to_v":  floats[9] if len(floats) > 9 else 0.0,
+                }
 
                 players.append({
                     "Name": name,
@@ -97,28 +92,19 @@ def scrape_basketball_monster():
                     "Cost": max(1.0, cost),
                     "G": games,
                     "TotalV": total_v,
+                    "Stats": cat_v,
                     "locked": False
                 })
 
-            except Exception:
+            except Exception as e:
                 continue
 
-        print(f"Successfully scraped {len(players)} players.")
+        print(f"Successfully scraped {len(players)} players with full category stats.")
         
-        if len(players) > 0:
-            with open("data.json", "w") as f:
-                json.dump(players, f, indent=2)
-        else:
-            save_empty_json()
+        await browser.close()
 
-    except Exception as e:
-        print(f"An error occurred during scraping: {e}")
-        save_empty_json()
-
-def save_empty_json():
-    with open("data.json", "w") as f:
-        json.dump([], f)
-    print("Created fallback empty data.json")
+        with open("data.json", "w") as f:
+            json.dump(players, f, indent=2)
 
 if __name__ == "__main__":
-    scrape_basketball_monster()
+    asyncio.run(run())
