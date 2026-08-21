@@ -1,29 +1,8 @@
 import json
 import asyncio
-import re
 from playwright.async_api import async_playwright
 
-# Positional tokens to recognize
-VALID_POSITIONS = ["PG", "SG", "SF", "PF", "C"]
-
-def extract_positions(text_content):
-    """
-    Extracts all valid positions (PG, SG, SF, PF, C) from a raw string.
-    Preserves order and handles multi-eligibility (e.g., PG/SG).
-    """
-    if not text_content:
-        return ""
-    
-    # Standardize delimiters
-    clean_text = text_content.upper().replace("-", " ").replace("/", " ").replace(",", " ")
-    tokens = clean_text.split()
-    
-    found_positions = []
-    for token in tokens:
-        if token in VALID_POSITIONS and token not in found_positions:
-            found_positions.append(token)
-            
-    return "/".join(found_positions) if found_positions else ""
+VALID_POSITIONS = {"PG", "SG", "SF", "PF", "C"}
 
 async def run():
     async with async_playwright() as p:
@@ -37,10 +16,9 @@ async def run():
         print("Navigating to Basketball Monster...")
         await page.goto("https://basketballmonster.com/PlayerRankings.aspx", wait_until="networkidle", timeout=30000)
 
-        # 1. Ensure page is loaded
         await page.wait_for_selector("table", timeout=15000)
 
-        # 2. Configure Form Controls if available
+        # 1. Attempt to set display to 'Value'
         try:
             value_dropdown = page.locator("select[id*='ValueType']").first
             if await value_dropdown.count() > 0:
@@ -51,14 +29,14 @@ async def run():
                 await filter_btn.click()
                 await page.wait_for_load_state("networkidle")
         except Exception as e:
-            print(f"Form configuration note: {e}")
+            print(f"Form interaction note: {e}")
 
-        # 3. Locate Target Data Table
+        # 2. Find the main rankings table
         tables = await page.query_selector_all("table")
         target_table = None
         for t in tables:
             txt = await t.inner_text()
-            if "Rank" in txt or "Player" in txt:
+            if "Rank" in txt or "Player" in txt or "Name" in txt:
                 target_table = t
                 break
 
@@ -68,21 +46,42 @@ async def run():
             return
 
         rows = await target_table.query_selector_all("tr")
-        players = []
 
-        # Map header columns dynamically to verify position index
-        header_pos_idx = None
+        # 3. Dynamically map exact column header positions
+        col_indices = {
+            "name": None,
+            "pos": None,
+            "team": None,
+            "cost": None,
+            "gp": None
+        }
+
         for r in rows:
-            ths = await r.query_selector_all("th")
-            if ths:
-                for idx, th in enumerate(ths):
-                    t_text = (await th.inner_text()).strip().upper()
-                    if t_text == "POS" or t_text == "POSITION":
-                        header_pos_idx = idx
-                        break
-            if header_pos_idx is not None:
+            cells = await r.query_selector_all("th, td")
+            if len(cells) < 4:
+                continue
+
+            cell_texts = [(await c.inner_text()).strip().upper() for c in cells]
+            
+            if "NAME" in cell_texts or "PLAYER" in cell_texts or "POS" in cell_texts:
+                for idx, text in enumerate(cell_texts):
+                    if text in ["NAME", "PLAYER"]:
+                        col_indices["name"] = idx
+                    elif text in ["POS", "POSITION"]:
+                        col_indices["pos"] = idx
+                    elif text in ["TEAM", "TEAMS"]:
+                        col_indices["team"] = idx
+                    elif text in ["COST", "$", "PRICE"]:
+                        col_indices["cost"] = idx
+                    elif text in ["G", "GP", "GAMES"]:
+                        col_indices["gp"] = idx
                 break
 
+        print("Mapped Column Header Indices:", col_indices)
+
+        players = []
+
+        # 4. Extract Row Data using Index Map
         for row in rows:
             cols = await row.query_selector_all("td")
             if not cols or len(cols) < 5:
@@ -96,53 +95,59 @@ async def run():
 
             # Player Name
             name_elem = await row.query_selector("a")
-            if not name_elem:
-                continue
-            name = (await name_elem.inner_text()).strip()
+            name = (await name_elem.inner_text()).strip() if name_elem else ""
+            
+            if not name and col_indices["name"] is not None and col_indices["name"] < len(cell_texts):
+                name = cell_texts[col_indices["name"]]
+
             if not name or name.upper() in ["PLAYER", "NAME", "RANK"]:
                 continue
 
-            # --- DEDICATED POSITION RESOLUTION LOGIC ---
+            # --- POSITION EXTRACTION ---
             pos = ""
+            
+            # Direct index lookup if POS column header was found
+            if col_indices["pos"] is not None and col_indices["pos"] < len(cell_texts):
+                raw_pos = cell_texts[col_indices["pos"]].strip()
+                # Split multi-positions (e.g., PG/SG)
+                pos_parts = [p.strip().upper() for p in raw_pos.replace("-", "/").replace(",", "/").split("/") if p.strip().upper() in VALID_POSITIONS]
+                if pos_parts:
+                    pos = "/".join(pos_parts)
 
-            # Strategy A: Header Index Match
-            if header_pos_idx is not None and header_pos_idx < len(cell_texts):
-                pos = extract_positions(cell_texts[header_pos_idx])
-
-            # Strategy B: Cell inspection around player name cell
+            # Fallback: Scan cells specifically for position tokens while ignoring Team codes
             if not pos:
-                for idx, text in enumerate(cell_texts):
-                    # Skip columns that contain full player names or team abbreviations like DEN/OKC
-                    if name.upper() in text.upper():
+                for idx, txt in enumerate(cell_texts):
+                    # Skip the player name cell and team cell index
+                    if idx == col_indices["name"] or idx == col_indices["team"]:
                         continue
-                    extracted = extract_positions(text)
-                    if extracted:
-                        pos = extracted
+                    
+                    tokens = [t.strip().upper() for t in txt.replace("/", " ").replace("-", " ").split()]
+                    matched = [t for t in tokens if t in VALID_POSITIONS]
+                    if matched:
+                        pos = "/".join(dict.fromkeys(matched))
                         break
 
-            # Strategy C: Check inner HTML for hidden spans/classes containing positions
-            if not pos:
-                row_html = await row.inner_html()
-                # Find position occurrences wrapped in HTML tags
-                html_matches = re.findall(r'>\s*(PG|SG|SF|PF|C)\s*<', row_html, re.IGNORECASE)
-                if html_matches:
-                    pos = "/".join(dict.fromkeys([m.upper() for m in html_matches]))
-
-            # Fallback only if no valid positions were detected anywhere
             if not pos:
                 pos = "Util"
 
-            # Cost Extraction
+            # --- COST EXTRACTION ---
             cost = 1.0
-            for txt in cell_texts:
-                if "$" in txt:
-                    try:
-                        cost = float(txt.replace("$", "").strip())
-                        break
-                    except ValueError:
-                        pass
+            if col_indices["cost"] is not None and col_indices["cost"] < len(cell_texts):
+                try:
+                    cost = float(cell_texts[col_indices["cost"]].replace("$", "").strip())
+                except ValueError:
+                    pass
 
-            # Numeric Floats Parser
+            if cost == 1.0:
+                for txt in cell_texts:
+                    if "$" in txt:
+                        try:
+                            cost = float(txt.replace("$", "").strip())
+                            break
+                        except ValueError:
+                            pass
+
+            # --- NUMERIC VALUES & STATS ---
             floats = []
             for txt in cell_texts:
                 clean = txt.replace("$", "").replace("%", "").replace(",", "").strip()
@@ -151,14 +156,20 @@ async def run():
                 except ValueError:
                     continue
 
-            # Identify Games Played (GP)
+            # Games Played
             games = 82
-            for f in floats:
-                if f.is_integer() and 40 <= f <= 82:
-                    games = int(f)
-                    break
+            if col_indices["gp"] is not None and col_indices["gp"] < len(cell_texts):
+                try:
+                    games = int(float(cell_texts[col_indices["gp"]]))
+                except ValueError:
+                    pass
+            else:
+                for f in floats:
+                    if f.is_integer() and 40 <= f <= 82:
+                        games = int(f)
+                        break
 
-            # Stat V-Scores / Values
+            # Stat V-Scores
             stat_floats = [f for f in floats if not (f.is_integer() and 40 <= f <= 82)]
             total_v = stat_floats[0] if len(stat_floats) > 0 else 0.0
 
@@ -184,7 +195,7 @@ async def run():
                 "locked": False
             })
 
-        print(f"Scraped {len(players)} players with position matching.")
+        print(f"Scraped {len(players)} players with header-mapped position logic.")
         await browser.close()
 
         with open("data.json", "w") as f:
