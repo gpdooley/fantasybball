@@ -58,7 +58,7 @@
   },
   {
     "Name": "Kawhi Leonard",
-    "Pos": "SF/PF",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 65,
     "TotalV": 0.75,
@@ -77,7 +77,7 @@
   },
   {
     "Name": "Tyrese Maxey",
-    "Pos": "PG/SG",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 70,
     "TotalV": 0.73,
@@ -134,7 +134,7 @@
   },
   {
     "Name": "Lauri Markkanen",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 42,
     "TotalV": 0.44,
@@ -153,7 +153,7 @@
   },
   {
     "Name": "Jamal Murray",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 75,
     "TotalV": 0.43,
@@ -191,7 +191,7 @@
   },
   {
     "Name": "Trey Murphy",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 66,
     "TotalV": 0.39,
@@ -229,7 +229,7 @@
   },
   {
     "Name": "Scottie Barnes",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 80,
     "TotalV": 0.36,
@@ -248,7 +248,7 @@
   },
   {
     "Name": "Anthony Edwards",
-    "Pos": "SG/SF",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 61,
     "TotalV": 0.35,
@@ -267,7 +267,7 @@
   },
   {
     "Name": "Kevin Durant",
-    "Pos": "SF/PF",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 78,
     "TotalV": 0.34,
@@ -286,7 +286,7 @@
   },
   {
     "Name": "Kevin Porter Jr.",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 38,
     "TotalV": 0.32,
@@ -305,7 +305,7 @@
   },
   {
     "Name": "Cade Cunningham",
-    "Pos": "PG/SG",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 64,
     "TotalV": 0.32,
@@ -324,7 +324,7 @@
   },
   {
     "Name": "Jalen Johnson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 72,
     "TotalV": 0.3,
@@ -362,7 +362,7 @@
   },
   {
     "Name": "Jimmy Butler",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 38,
     "TotalV": 0.3,
@@ -381,7 +381,7 @@
   },
   {
     "Name": "Kadary Richmond",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 3,
     "TotalV": 0.29,
@@ -400,7 +400,7 @@
   },
   {
     "Name": "Anthony Davis",
-    "Pos": "PF/C",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 20,
     "TotalV": 0.28,
@@ -419,7 +419,7 @@
   },
   {
     "Name": "James Harden",
-    "Pos": "PG/SG",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 70,
     "TotalV": 0.26,
@@ -476,7 +476,7 @@
   },
   {
     "Name": "Jayson Tatum",
-    "Pos": "SF/PF",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 16,
     "TotalV": 0.22,
@@ -495,7 +495,7 @@
   },
   {
     "Name": "Austin Reaves",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 51,
     "TotalV": 0.21,
@@ -514,7 +514,7 @@
   },
   {
     "Name": "Nickeil Alexander-Walker",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 78,
     "TotalV": 0.21,
@@ -533,7 +533,7 @@
   },
   {
     "Name": "Michael Porter Jr.",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 52,
     "TotalV": 0.2,
@@ -552,7 +552,7 @@
   },
   {
     "Name": "Derrick White",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 77,
     "TotalV": 0.17,
@@ -571,7 +571,7 @@
   },
   {
     "Name": "Amen Thompson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 79,
     "TotalV": 0.15,
@@ -628,7 +628,7 @@
   },
   {
     "Name": "Paul George",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 37,
     "TotalV": 0.14,
@@ -647,7 +647,7 @@
   },
   {
     "Name": "O.G. Anunoby",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 67,
     "TotalV": 0.13,
@@ -704,7 +704,7 @@
   },
   {
     "Name": "Ty Jerome",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 15,
     "TotalV": 0.13,
@@ -723,7 +723,7 @@
   },
   {
     "Name": "Keyonte George",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 54,
     "TotalV": 0.12,
@@ -742,7 +742,7 @@
   },
   {
     "Name": "Desmond Bane",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 82,
     "TotalV": 0.12,
@@ -780,7 +780,7 @@
   },
   {
     "Name": "Cooper Flagg",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 70,
     "TotalV": 0.11,
@@ -799,7 +799,7 @@
   },
   {
     "Name": "Mikal Bridges",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 82,
     "TotalV": 0.1,
@@ -837,7 +837,7 @@
   },
   {
     "Name": "Dyson Daniels",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 76,
     "TotalV": 0.07,
@@ -856,7 +856,7 @@
   },
   {
     "Name": "Tyler Herro",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 33,
     "TotalV": 0.07,
@@ -913,7 +913,7 @@
   },
   {
     "Name": "Evan Mobley",
-    "Pos": "PF/C",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 65,
     "TotalV": 0.05,
@@ -932,7 +932,7 @@
   },
   {
     "Name": "LeBron James",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 60,
     "TotalV": 0.05,
@@ -951,7 +951,7 @@
   },
   {
     "Name": "Jalen Suggs",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 57,
     "TotalV": 0.05,
@@ -970,7 +970,7 @@
   },
   {
     "Name": "Ryan Rollins",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 74,
     "TotalV": 0.05,
@@ -1008,7 +1008,7 @@
   },
   {
     "Name": "Immanuel Quickley",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 70,
     "TotalV": 0.04,
@@ -1046,7 +1046,7 @@
   },
   {
     "Name": "Brandon Miller",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 65,
     "TotalV": 0.02,
@@ -1065,7 +1065,7 @@
   },
   {
     "Name": "Alondes Williams",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 4,
     "TotalV": 0.02,
@@ -1122,7 +1122,7 @@
   },
   {
     "Name": "VJ Edgecombe",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 75,
     "TotalV": 0.01,
@@ -1141,7 +1141,7 @@
   },
   {
     "Name": "Andrew Wiggins",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 68,
     "TotalV": 0.01,
@@ -1160,7 +1160,7 @@
   },
   {
     "Name": "Jaylen Brown",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 71,
     "TotalV": 0.0,
@@ -1179,7 +1179,7 @@
   },
   {
     "Name": "Dejounte Murray",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 14,
     "TotalV": 0.0,
@@ -1198,7 +1198,7 @@
   },
   {
     "Name": "Josh Giddey",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 54,
     "TotalV": -0.01,
@@ -1217,7 +1217,7 @@
   },
   {
     "Name": "Devin Booker",
-    "Pos": "PG/SG",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 64,
     "TotalV": -0.01,
@@ -1236,7 +1236,7 @@
   },
   {
     "Name": "Kon Knueppel",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 81,
     "TotalV": -0.01,
@@ -1255,7 +1255,7 @@
   },
   {
     "Name": "Giannis Antetokounmpo",
-    "Pos": "PF/C",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 36,
     "TotalV": -0.02,
@@ -1312,7 +1312,7 @@
   },
   {
     "Name": "Jaden McDaniels",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 73,
     "TotalV": -0.02,
@@ -1331,7 +1331,7 @@
   },
   {
     "Name": "Reed Sheppard",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.04,
@@ -1350,7 +1350,7 @@
   },
   {
     "Name": "Payton Pritchard",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 79,
     "TotalV": -0.05,
@@ -1388,7 +1388,7 @@
   },
   {
     "Name": "Matas Buzelis",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.06,
@@ -1407,7 +1407,7 @@
   },
   {
     "Name": "Norman Powell",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 58,
     "TotalV": -0.06,
@@ -1426,7 +1426,7 @@
   },
   {
     "Name": "DeMar DeRozan",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.06,
@@ -1464,7 +1464,7 @@
   },
   {
     "Name": "Deni Avdija",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 66,
     "TotalV": -0.07,
@@ -1502,7 +1502,7 @@
   },
   {
     "Name": "Julius Randle",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 79,
     "TotalV": -0.07,
@@ -1521,7 +1521,7 @@
   },
   {
     "Name": "Franz Wagner",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 34,
     "TotalV": -0.07,
@@ -1540,7 +1540,7 @@
   },
   {
     "Name": "Grayson Allen",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 51,
     "TotalV": -0.07,
@@ -1559,7 +1559,7 @@
   },
   {
     "Name": "Tre Jones",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 65,
     "TotalV": -0.07,
@@ -1578,7 +1578,7 @@
   },
   {
     "Name": "Brandon Ingram",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.08,
@@ -1597,7 +1597,7 @@
   },
   {
     "Name": "Saddiq Bey",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 72,
     "TotalV": -0.08,
@@ -1616,7 +1616,7 @@
   },
   {
     "Name": "Jabari Smith Jr.",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.08,
@@ -1635,7 +1635,7 @@
   },
   {
     "Name": "Collin Gillespie",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 80,
     "TotalV": -0.09,
@@ -1654,7 +1654,7 @@
   },
   {
     "Name": "Josh Hart",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 66,
     "TotalV": -0.09,
@@ -1673,7 +1673,7 @@
   },
   {
     "Name": "Jalen Williams",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 33,
     "TotalV": -0.09,
@@ -1692,7 +1692,7 @@
   },
   {
     "Name": "Keegan Murray",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 23,
     "TotalV": -0.09,
@@ -1730,7 +1730,7 @@
   },
   {
     "Name": "Bez Mbeng",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 15,
     "TotalV": -0.12,
@@ -1787,7 +1787,7 @@
   },
   {
     "Name": "Ayo Dosunmu",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 69,
     "TotalV": -0.13,
@@ -1806,7 +1806,7 @@
   },
   {
     "Name": "Donte DiVincenzo",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.13,
@@ -1825,7 +1825,7 @@
   },
   {
     "Name": "Ausar Thompson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 73,
     "TotalV": -0.14,
@@ -1844,7 +1844,7 @@
   },
   {
     "Name": "Cormac Ryan",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 11,
     "TotalV": -0.14,
@@ -1901,7 +1901,7 @@
   },
   {
     "Name": "Cason Wallace",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.15,
@@ -1920,7 +1920,7 @@
   },
   {
     "Name": "Darius Garland",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 45,
     "TotalV": -0.15,
@@ -1939,7 +1939,7 @@
   },
   {
     "Name": "Jalen Slawson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 13,
     "TotalV": -0.15,
@@ -1996,7 +1996,7 @@
   },
   {
     "Name": "Ajay Mitchell",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 57,
     "TotalV": -0.16,
@@ -2015,7 +2015,7 @@
   },
   {
     "Name": "Miles Bridges",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.16,
@@ -2034,7 +2034,7 @@
   },
   {
     "Name": "Jrue Holiday",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 53,
     "TotalV": -0.16,
@@ -2072,7 +2072,7 @@
   },
   {
     "Name": "Tobias Harris",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 63,
     "TotalV": -0.16,
@@ -2110,7 +2110,7 @@
   },
   {
     "Name": "Kyshawn George",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 48,
     "TotalV": -0.17,
@@ -2129,7 +2129,7 @@
   },
   {
     "Name": "Kelly Oubre",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 50,
     "TotalV": -0.17,
@@ -2148,7 +2148,7 @@
   },
   {
     "Name": "Santi Aldama",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 43,
     "TotalV": -0.17,
@@ -2167,7 +2167,7 @@
   },
   {
     "Name": "John Collins",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 69,
     "TotalV": -0.18,
@@ -2224,7 +2224,7 @@
   },
   {
     "Name": "Cam Spencer",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 72,
     "TotalV": -0.19,
@@ -2243,7 +2243,7 @@
   },
   {
     "Name": "Zion Williamson",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 62,
     "TotalV": -0.2,
@@ -2262,7 +2262,7 @@
   },
   {
     "Name": "C.J. McCollum",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 76,
     "TotalV": -0.2,
@@ -2281,7 +2281,7 @@
   },
   {
     "Name": "Julian Champagnie",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.2,
@@ -2300,7 +2300,7 @@
   },
   {
     "Name": "Zach LaVine",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 39,
     "TotalV": -0.2,
@@ -2319,7 +2319,7 @@
   },
   {
     "Name": "Devin Vassell",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 67,
     "TotalV": -0.2,
@@ -2338,7 +2338,7 @@
   },
   {
     "Name": "Peyton Watson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 54,
     "TotalV": -0.21,
@@ -2357,7 +2357,7 @@
   },
   {
     "Name": "Brandin Podziemski",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.21,
@@ -2414,7 +2414,7 @@
   },
   {
     "Name": "Royce O'Neale",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 78,
     "TotalV": -0.21,
@@ -2433,7 +2433,7 @@
   },
   {
     "Name": "Paolo Banchero",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 72,
     "TotalV": -0.21,
@@ -2452,7 +2452,7 @@
   },
   {
     "Name": "Andrew Nembhard",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 57,
     "TotalV": -0.22,
@@ -2471,7 +2471,7 @@
   },
   {
     "Name": "Cam Johnson",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 54,
     "TotalV": -0.22,
@@ -2509,7 +2509,7 @@
   },
   {
     "Name": "Aaron Gordon",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 36,
     "TotalV": -0.22,
@@ -2528,7 +2528,7 @@
   },
   {
     "Name": "Toumani Camara",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.22,
@@ -2566,7 +2566,7 @@
   },
   {
     "Name": "Anthony Black",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 64,
     "TotalV": -0.24,
@@ -2585,7 +2585,7 @@
   },
   {
     "Name": "Sandro Mamukelashvili",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 80,
     "TotalV": -0.24,
@@ -2642,7 +2642,7 @@
   },
   {
     "Name": "Moses Moody",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 60,
     "TotalV": -0.25,
@@ -2661,7 +2661,7 @@
   },
   {
     "Name": "Jaylon Tyson",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 66,
     "TotalV": -0.25,
@@ -2680,7 +2680,7 @@
   },
   {
     "Name": "Bilal Coulibaly",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 56,
     "TotalV": -0.25,
@@ -2699,7 +2699,7 @@
   },
   {
     "Name": "PJ Washington",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 56,
     "TotalV": -0.26,
@@ -2737,7 +2737,7 @@
   },
   {
     "Name": "Matisse Thybulle",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 30,
     "TotalV": -0.26,
@@ -2775,7 +2775,7 @@
   },
   {
     "Name": "Andersson Garcia",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 5,
     "TotalV": -0.27,
@@ -2794,7 +2794,7 @@
   },
   {
     "Name": "Bobby Portis",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 67,
     "TotalV": -0.27,
@@ -2813,7 +2813,7 @@
   },
   {
     "Name": "John Konchar",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 56,
     "TotalV": -0.27,
@@ -2832,7 +2832,7 @@
   },
   {
     "Name": "Sam Merrill",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 52,
     "TotalV": -0.27,
@@ -2851,7 +2851,7 @@
   },
   {
     "Name": "Ja Morant",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 20,
     "TotalV": -0.27,
@@ -2870,7 +2870,7 @@
   },
   {
     "Name": "Lucas Williamson",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 7,
     "TotalV": -0.27,
@@ -2927,7 +2927,7 @@
   },
   {
     "Name": "Jerami Grant",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 57,
     "TotalV": -0.27,
@@ -2946,7 +2946,7 @@
   },
   {
     "Name": "Derrick Jones",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 50,
     "TotalV": -0.27,
@@ -2965,7 +2965,7 @@
   },
   {
     "Name": "Cedric Coward",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 62,
     "TotalV": -0.28,
@@ -2984,7 +2984,7 @@
   },
   {
     "Name": "Adama Bal",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 8,
     "TotalV": -0.28,
@@ -3003,7 +3003,7 @@
   },
   {
     "Name": "Jordan Goodwin",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 70,
     "TotalV": -0.28,
@@ -3098,7 +3098,7 @@
   },
   {
     "Name": "Collin Sexton",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 68,
     "TotalV": -0.29,
@@ -3117,7 +3117,7 @@
   },
   {
     "Name": "R.J. Barrett",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 57,
     "TotalV": -0.29,
@@ -3136,7 +3136,7 @@
   },
   {
     "Name": "Dillon Brooks",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 56,
     "TotalV": -0.29,
@@ -3155,7 +3155,7 @@
   },
   {
     "Name": "Julian Reese",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 13,
     "TotalV": -0.3,
@@ -3174,7 +3174,7 @@
   },
   {
     "Name": "Kris Dunn",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.3,
@@ -3193,7 +3193,7 @@
   },
   {
     "Name": "Tari Eason",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 60,
     "TotalV": -0.3,
@@ -3212,7 +3212,7 @@
   },
   {
     "Name": "Stephon Castle",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 68,
     "TotalV": -0.3,
@@ -3231,7 +3231,7 @@
   },
   {
     "Name": "Naji Marshall",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 74,
     "TotalV": -0.3,
@@ -3250,7 +3250,7 @@
   },
   {
     "Name": "Justin Champagnie",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 69,
     "TotalV": -0.31,
@@ -3269,7 +3269,7 @@
   },
   {
     "Name": "Bennedict Mathurin",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 54,
     "TotalV": -0.31,
@@ -3307,7 +3307,7 @@
   },
   {
     "Name": "Tre Scott",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 6,
     "TotalV": -0.31,
@@ -3326,7 +3326,7 @@
   },
   {
     "Name": "Shaedon Sharpe",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 50,
     "TotalV": -0.31,
@@ -3364,7 +3364,7 @@
   },
   {
     "Name": "Scotty Pippen Jr.",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 10,
     "TotalV": -0.32,
@@ -3383,7 +3383,7 @@
   },
   {
     "Name": "Herb Jones",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 56,
     "TotalV": -0.32,
@@ -3402,7 +3402,7 @@
   },
   {
     "Name": "Christian Braun",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 44,
     "TotalV": -0.32,
@@ -3421,7 +3421,7 @@
   },
   {
     "Name": "Miles McBride",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 41,
     "TotalV": -0.33,
@@ -3440,7 +3440,7 @@
   },
   {
     "Name": "Jaime Jaquez Jr.",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 75,
     "TotalV": -0.33,
@@ -3459,7 +3459,7 @@
   },
   {
     "Name": "Quentin Grimes",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 75,
     "TotalV": -0.33,
@@ -3478,7 +3478,7 @@
   },
   {
     "Name": "Collin Murray-Boyles",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 57,
     "TotalV": -0.33,
@@ -3497,7 +3497,7 @@
   },
   {
     "Name": "Isaiah Joe",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 71,
     "TotalV": -0.34,
@@ -3516,7 +3516,7 @@
   },
   {
     "Name": "DaQuan Jeffries",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 3,
     "TotalV": -0.34,
@@ -3535,7 +3535,7 @@
   },
   {
     "Name": "Duncan Robinson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.34,
@@ -3554,7 +3554,7 @@
   },
   {
     "Name": "De'Anthony Melton",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 49,
     "TotalV": -0.34,
@@ -3573,7 +3573,7 @@
   },
   {
     "Name": "Davion Mitchell",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 70,
     "TotalV": -0.34,
@@ -3592,7 +3592,7 @@
   },
   {
     "Name": "Russell Westbrook",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 64,
     "TotalV": -0.34,
@@ -3611,7 +3611,7 @@
   },
   {
     "Name": "T.J. McConnell",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 56,
     "TotalV": -0.34,
@@ -3630,7 +3630,7 @@
   },
   {
     "Name": "Ace Bailey",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 72,
     "TotalV": -0.34,
@@ -3649,7 +3649,7 @@
   },
   {
     "Name": "Malachi Smith",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 15,
     "TotalV": -0.35,
@@ -3668,7 +3668,7 @@
   },
   {
     "Name": "Keldon Johnson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.35,
@@ -3687,7 +3687,7 @@
   },
   {
     "Name": "Ziaire Williams",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 56,
     "TotalV": -0.36,
@@ -3706,7 +3706,7 @@
   },
   {
     "Name": "Leaky Black",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 15,
     "TotalV": -0.36,
@@ -3725,7 +3725,7 @@
   },
   {
     "Name": "Max Christie",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.36,
@@ -3744,7 +3744,7 @@
   },
   {
     "Name": "Marcus Smart",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 62,
     "TotalV": -0.37,
@@ -3763,7 +3763,7 @@
   },
   {
     "Name": "Kevin Huerter",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 69,
     "TotalV": -0.37,
@@ -3801,7 +3801,7 @@
   },
   {
     "Name": "Obi Toppin",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 24,
     "TotalV": -0.37,
@@ -3820,7 +3820,7 @@
   },
   {
     "Name": "Tim Hardaway Jr.",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 80,
     "TotalV": -0.37,
@@ -3839,7 +3839,7 @@
   },
   {
     "Name": "Tristan da Silva",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 77,
     "TotalV": -0.38,
@@ -3858,7 +3858,7 @@
   },
   {
     "Name": "Jake LaRavia",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.38,
@@ -3877,7 +3877,7 @@
   },
   {
     "Name": "Chaney Johnson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 17,
     "TotalV": -0.38,
@@ -3934,7 +3934,7 @@
   },
   {
     "Name": "Blake Hinson",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 14,
     "TotalV": -0.39,
@@ -3953,7 +3953,7 @@
   },
   {
     "Name": "Dylan Harper",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 69,
     "TotalV": -0.39,
@@ -3991,7 +3991,7 @@
   },
   {
     "Name": "Marvin Bagley III",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 60,
     "TotalV": -0.39,
@@ -4029,7 +4029,7 @@
   },
   {
     "Name": "Aaron Nesmith",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 45,
     "TotalV": -0.4,
@@ -4067,7 +4067,7 @@
   },
   {
     "Name": "Javon Small",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 41,
     "TotalV": -0.4,
@@ -4086,7 +4086,7 @@
   },
   {
     "Name": "David Roddy",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 5,
     "TotalV": -0.41,
@@ -4105,7 +4105,7 @@
   },
   {
     "Name": "Max Strus",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 12,
     "TotalV": -0.41,
@@ -4124,7 +4124,7 @@
   },
   {
     "Name": "Draymond Green",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 68,
     "TotalV": -0.41,
@@ -4143,7 +4143,7 @@
   },
   {
     "Name": "Sam Hauser",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 78,
     "TotalV": -0.41,
@@ -4162,7 +4162,7 @@
   },
   {
     "Name": "Dominick Barlow",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 71,
     "TotalV": -0.41,
@@ -4181,7 +4181,7 @@
   },
   {
     "Name": "Anfernee Simons",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 55,
     "TotalV": -0.42,
@@ -4200,7 +4200,7 @@
   },
   {
     "Name": "Jaylin Williams",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 65,
     "TotalV": -0.42,
@@ -4238,7 +4238,7 @@
   },
   {
     "Name": "Hayden Gray",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 1,
     "TotalV": -0.42,
@@ -4257,7 +4257,7 @@
   },
   {
     "Name": "Javonte Green",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.42,
@@ -4276,7 +4276,7 @@
   },
   {
     "Name": "Jeremiah Fears",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 82,
     "TotalV": -0.42,
@@ -4314,7 +4314,7 @@
   },
   {
     "Name": "Rui Hachimura",
-    "Pos": "Util",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 68,
     "TotalV": -0.43,
@@ -4333,7 +4333,7 @@
   },
   {
     "Name": "Luke Kennard",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 78,
     "TotalV": -0.43,
@@ -4352,7 +4352,7 @@
   },
   {
     "Name": "Brice Sensabaugh",
-    "Pos": "Util",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 75,
     "TotalV": -0.43,
@@ -4390,7 +4390,7 @@
   },
   {
     "Name": "Cam Payne",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 22,
     "TotalV": -0.44,
@@ -4409,7 +4409,7 @@
   },
   {
     "Name": "Egor Demin",
-    "Pos": "Util",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 52,
     "TotalV": -0.44,
@@ -4428,7 +4428,7 @@
   },
   {
     "Name": "Dru Smith",
-    "Pos": "Util",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 70,
     "TotalV": -0.44,
