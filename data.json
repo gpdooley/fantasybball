@@ -4,10 +4,10 @@
     "Pos": "PG",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": 1.28,
+    "TotalV": 1.29,
     "Stats": {
       "pts_v": 1.0,
-      "m3_v": 1.28,
+      "m3_v": 1.29,
       "reb_v": 8.0,
       "ast_v": 5.9,
       "stl_v": 8.1,
@@ -41,18 +41,18 @@
     "Name": "Stephen Curry",
     "Pos": "PG",
     "Cost": 1.0,
-    "G": 6,
-    "TotalV": 0.87,
+    "G": 7,
+    "TotalV": 0.86,
     "Stats": {
       "pts_v": 3.0,
-      "m3_v": 0.87,
-      "reb_v": 6.0,
-      "ast_v": 4.5,
-      "stl_v": 4.2,
-      "blk_v": 4.5,
+      "m3_v": 0.86,
+      "reb_v": 7.0,
+      "ast_v": 4.7,
+      "stl_v": 3.7,
+      "blk_v": 4.4,
       "fg_v": 1.3,
-      "ft_v": 0.2,
-      "to_v": 0.468
+      "ft_v": 0.1,
+      "to_v": 0.469
     },
     "locked": false
   },
@@ -175,10 +175,10 @@
     "Pos": "C",
     "Cost": 1.0,
     "G": 7,
-    "TotalV": 0.45,
+    "TotalV": 0.43,
     "Stats": {
       "pts_v": 10.0,
-      "m3_v": 0.45,
+      "m3_v": 0.43,
       "reb_v": 7.0,
       "ast_v": 1.0,
       "stl_v": 9.1,
@@ -213,10 +213,10 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 2,
-    "TotalV": 0.4,
+    "TotalV": 0.41,
     "Stats": {
       "pts_v": 12.0,
-      "m3_v": 0.4,
+      "m3_v": 0.41,
       "reb_v": 2.0,
       "ast_v": 2.0,
       "stl_v": 7.5,
@@ -232,10 +232,10 @@
     "Pos": "PG",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": 0.4,
+    "TotalV": 0.41,
     "Stats": {
       "pts_v": 13.0,
-      "m3_v": 0.4,
+      "m3_v": 0.41,
       "reb_v": 8.0,
       "ast_v": 2.6,
       "stl_v": 4.3,
@@ -247,40 +247,21 @@
     "locked": false
   },
   {
-    "Name": "Cade Cunningham",
-    "Pos": "PG",
+    "Name": "Miles Bridges",
+    "Pos": "SF",
     "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.38,
+    "G": 7,
+    "TotalV": 0.39,
     "Stats": {
       "pts_v": 14.0,
-      "m3_v": 0.38,
-      "reb_v": 8.0,
+      "m3_v": 0.39,
+      "reb_v": 7.0,
       "ast_v": 2.3,
-      "stl_v": 5.6,
-      "blk_v": 7.6,
+      "stl_v": 7.9,
+      "blk_v": 3.1,
       "fg_v": 1.6,
-      "ft_v": 1.3,
-      "to_v": 0.472
-    },
-    "locked": false
-  },
-  {
-    "Name": "Walker Kessler",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 9,
-    "TotalV": 0.38,
-    "Stats": {
-      "pts_v": 0.38,
-      "m3_v": 9.0,
-      "reb_v": 14.4,
-      "ast_v": 0.0,
-      "stl_v": 10.2,
-      "blk_v": 1.1,
-      "fg_v": 1.3,
-      "ft_v": 2.7,
-      "to_v": 0.718
+      "ft_v": 0.7,
+      "to_v": 0.474
     },
     "locked": false
   },
@@ -300,6 +281,44 @@
       "fg_v": 0.3,
       "ft_v": 0.46,
       "to_v": 0.808
+    },
+    "locked": false
+  },
+  {
+    "Name": "Walker Kessler",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": 0.37,
+    "Stats": {
+      "pts_v": 0.37,
+      "m3_v": 9.0,
+      "reb_v": 14.4,
+      "ast_v": 0.0,
+      "stl_v": 10.2,
+      "blk_v": 1.1,
+      "fg_v": 1.3,
+      "ft_v": 2.7,
+      "to_v": 0.718
+    },
+    "locked": false
+  },
+  {
+    "Name": "Cade Cunningham",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": 0.36,
+    "Stats": {
+      "pts_v": 0.36,
+      "m3_v": 8.0,
+      "reb_v": 2.3,
+      "ast_v": 5.6,
+      "stl_v": 7.6,
+      "blk_v": 1.6,
+      "fg_v": 1.1,
+      "ft_v": 0.472,
+      "to_v": 0.8
     },
     "locked": false
   },
@@ -361,6 +380,25 @@
     "locked": false
   },
   {
+    "Name": "Ty Jerome",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": 0.34,
+    "Stats": {
+      "pts_v": 0.34,
+      "m3_v": 7.0,
+      "reb_v": 2.6,
+      "ast_v": 3.6,
+      "stl_v": 5.3,
+      "blk_v": 1.0,
+      "fg_v": 0.3,
+      "ft_v": 0.504,
+      "to_v": 0.87
+    },
+    "locked": false
+  },
+  {
     "Name": "Yves Missi",
     "Pos": "C",
     "Cost": 1.0,
@@ -376,44 +414,6 @@
       "fg_v": 1.0,
       "ft_v": 2.0,
       "to_v": 0.889
-    },
-    "locked": false
-  },
-  {
-    "Name": "Ty Jerome",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": 0.32,
-    "Stats": {
-      "pts_v": 0.32,
-      "m3_v": 7.0,
-      "reb_v": 2.6,
-      "ast_v": 3.6,
-      "stl_v": 5.3,
-      "blk_v": 1.0,
-      "fg_v": 0.3,
-      "ft_v": 0.504,
-      "to_v": 0.87
-    },
-    "locked": false
-  },
-  {
-    "Name": "Zion Williamson",
-    "Pos": "PF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.3,
-    "Stats": {
-      "pts_v": 0.3,
-      "m3_v": 8.0,
-      "reb_v": 0.4,
-      "ast_v": 5.1,
-      "stl_v": 2.6,
-      "blk_v": 2.6,
-      "fg_v": 0.6,
-      "ft_v": 0.608,
-      "to_v": 12.8
     },
     "locked": false
   },
@@ -437,21 +437,59 @@
     "locked": false
   },
   {
-    "Name": "Miles Bridges",
+    "Name": "Duncan Robinson",
     "Pos": "SF",
     "Cost": 1.0,
-    "G": 6,
+    "G": 8,
     "TotalV": 0.28,
     "Stats": {
       "pts_v": 0.28,
-      "m3_v": 6.0,
-      "reb_v": 2.2,
-      "ast_v": 7.0,
-      "stl_v": 2.8,
-      "blk_v": 1.5,
-      "fg_v": 0.8,
-      "ft_v": 0.459,
-      "to_v": 14.2
+      "m3_v": 8.0,
+      "reb_v": 4.4,
+      "ast_v": 1.9,
+      "stl_v": 2.3,
+      "blk_v": 1.9,
+      "fg_v": 0.3,
+      "ft_v": 0.474,
+      "to_v": 11.9
+    },
+    "locked": false
+  },
+  {
+    "Name": "Devin Booker",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": 0.28,
+    "Stats": {
+      "pts_v": 0.28,
+      "m3_v": 7.0,
+      "reb_v": 1.9,
+      "ast_v": 2.9,
+      "stl_v": 5.1,
+      "blk_v": 0.9,
+      "fg_v": 0.3,
+      "ft_v": 0.488,
+      "to_v": 0.957
+    },
+    "locked": false
+  },
+  {
+    "Name": "Zion Williamson",
+    "Pos": "PF",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": 0.28,
+    "Stats": {
+      "pts_v": 0.28,
+      "m3_v": 8.0,
+      "reb_v": 0.4,
+      "ast_v": 5.1,
+      "stl_v": 2.6,
+      "blk_v": 2.5,
+      "fg_v": 0.6,
+      "ft_v": 0.608,
+      "to_v": 12.8
     },
     "locked": false
   },
@@ -475,63 +513,6 @@
     "locked": false
   },
   {
-    "Name": "Giannis Antetokounmpo",
-    "Pos": "PF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.27,
-    "Stats": {
-      "pts_v": 0.27,
-      "m3_v": 8.0,
-      "reb_v": 0.5,
-      "ast_v": 12.5,
-      "stl_v": 5.8,
-      "blk_v": 1.0,
-      "fg_v": 1.1,
-      "ft_v": 0.562,
-      "to_v": 0.658
-    },
-    "locked": false
-  },
-  {
-    "Name": "Bam Adebayo",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.26,
-    "Stats": {
-      "pts_v": 0.26,
-      "m3_v": 8.0,
-      "reb_v": 0.6,
-      "ast_v": 8.3,
-      "stl_v": 3.5,
-      "blk_v": 2.1,
-      "fg_v": 0.6,
-      "ft_v": 0.533,
-      "to_v": 13.1
-    },
-    "locked": false
-  },
-  {
-    "Name": "Duncan Robinson",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.25,
-    "Stats": {
-      "pts_v": 0.25,
-      "m3_v": 8.0,
-      "reb_v": 4.4,
-      "ast_v": 1.9,
-      "stl_v": 2.3,
-      "blk_v": 1.8,
-      "fg_v": 0.3,
-      "ft_v": 0.474,
-      "to_v": 11.9
-    },
-    "locked": false
-  },
-  {
     "Name": "Jayson Tatum",
     "Pos": "PF",
     "Cost": 1.0,
@@ -551,19 +532,57 @@
     "locked": false
   },
   {
+    "Name": "Giannis Antetokounmpo",
+    "Pos": "PF",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": 0.21,
+    "Stats": {
+      "pts_v": 0.21,
+      "m3_v": 9.0,
+      "reb_v": 0.6,
+      "ast_v": 12.7,
+      "stl_v": 5.6,
+      "blk_v": 0.9,
+      "fg_v": 1.0,
+      "ft_v": 0.56,
+      "to_v": 0.663
+    },
+    "locked": false
+  },
+  {
+    "Name": "Bam Adebayo",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": 0.21,
+    "Stats": {
+      "pts_v": 0.21,
+      "m3_v": 9.0,
+      "reb_v": 0.6,
+      "ast_v": 8.4,
+      "stl_v": 3.1,
+      "blk_v": 2.0,
+      "fg_v": 0.7,
+      "ft_v": 0.538,
+      "to_v": 13.0
+    },
+    "locked": false
+  },
+  {
     "Name": "Evan Mobley",
     "Pos": "PF",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": 0.22,
+    "TotalV": 0.19,
     "Stats": {
-      "pts_v": 0.22,
+      "pts_v": 0.19,
       "m3_v": 8.0,
       "reb_v": 2.1,
       "ast_v": 8.3,
       "stl_v": 3.5,
       "blk_v": 0.5,
-      "fg_v": 1.4,
+      "fg_v": 1.3,
       "ft_v": 0.56,
       "to_v": 12.5
     },
@@ -608,25 +627,6 @@
     "locked": false
   },
   {
-    "Name": "Devin Booker",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 6,
-    "TotalV": 0.17,
-    "Stats": {
-      "pts_v": 0.17,
-      "m3_v": 6.0,
-      "reb_v": 1.5,
-      "ast_v": 3.2,
-      "stl_v": 4.7,
-      "blk_v": 0.5,
-      "fg_v": 0.3,
-      "ft_v": 0.485,
-      "to_v": 0.953
-    },
-    "locked": false
-  },
-  {
     "Name": "Cedric Coward",
     "Pos": "SG",
     "Cost": 1.0,
@@ -650,9 +650,9 @@
     "Pos": "C",
     "Cost": 1.0,
     "G": 7,
-    "TotalV": 0.16,
+    "TotalV": 0.15,
     "Stats": {
-      "pts_v": 0.16,
+      "pts_v": 0.15,
       "m3_v": 7.0,
       "reb_v": 12.0,
       "ast_v": 1.0,
@@ -661,6 +661,25 @@
       "fg_v": 0.3,
       "ft_v": 2.4,
       "to_v": 0.569
+    },
+    "locked": false
+  },
+  {
+    "Name": "Wendell Carter Jr.",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": 0.12,
+    "Stats": {
+      "pts_v": 0.12,
+      "m3_v": 8.0,
+      "reb_v": 14.3,
+      "ast_v": 1.0,
+      "stl_v": 9.4,
+      "blk_v": 1.1,
+      "fg_v": 1.3,
+      "ft_v": 0.5,
+      "to_v": 0.656
     },
     "locked": false
   },
@@ -707,9 +726,9 @@
     "Pos": "SG",
     "Cost": 1.0,
     "G": 7,
-    "TotalV": 0.1,
+    "TotalV": 0.11,
     "Stats": {
-      "pts_v": 0.1,
+      "pts_v": 0.11,
       "m3_v": 7.0,
       "reb_v": 14.6,
       "ast_v": 2.0,
@@ -726,9 +745,9 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": 0.1,
+    "TotalV": 0.11,
     "Stats": {
-      "pts_v": 0.1,
+      "pts_v": 0.11,
       "m3_v": 8.0,
       "reb_v": 3.5,
       "ast_v": 7.4,
@@ -760,21 +779,21 @@
     "locked": false
   },
   {
-    "Name": "Anthony Black",
+    "Name": "Trae Young",
     "Pos": "PG",
     "Cost": 1.0,
-    "G": 4,
-    "TotalV": 0.09,
+    "G": 8,
+    "TotalV": 0.08,
     "Stats": {
-      "pts_v": 0.09,
-      "m3_v": 4.0,
-      "reb_v": 2.3,
-      "ast_v": 4.8,
-      "stl_v": 4.8,
-      "blk_v": 1.3,
-      "fg_v": 0.5,
-      "ft_v": 0.525,
-      "to_v": 10.0
+      "pts_v": 0.08,
+      "m3_v": 8.0,
+      "reb_v": 1.9,
+      "ast_v": 3.4,
+      "stl_v": 9.5,
+      "blk_v": 1.1,
+      "fg_v": 0.3,
+      "ft_v": 0.406,
+      "to_v": 13.3
     },
     "locked": false
   },
@@ -798,25 +817,6 @@
     "locked": false
   },
   {
-    "Name": "Trae Young",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.08,
-    "Stats": {
-      "pts_v": 0.08,
-      "m3_v": 8.0,
-      "reb_v": 1.9,
-      "ast_v": 3.4,
-      "stl_v": 9.5,
-      "blk_v": 1.1,
-      "fg_v": 0.3,
-      "ft_v": 0.406,
-      "to_v": 13.3
-    },
-    "locked": false
-  },
-  {
     "Name": "Ajay Mitchell",
     "Pos": "SG",
     "Cost": 1.0,
@@ -832,6 +832,25 @@
       "fg_v": 0.5,
       "ft_v": 0.505,
       "to_v": 13.9
+    },
+    "locked": false
+  },
+  {
+    "Name": "Nickeil Alexander-Walker",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": 0.08,
+    "Stats": {
+      "pts_v": 0.08,
+      "m3_v": 9.0,
+      "reb_v": 4.1,
+      "ast_v": 3.3,
+      "stl_v": 2.7,
+      "blk_v": 1.4,
+      "fg_v": 0.2,
+      "ft_v": 0.439,
+      "to_v": 0.824
     },
     "locked": false
   },
@@ -855,51 +874,13 @@
     "locked": false
   },
   {
-    "Name": "Nickeil Alexander-Walker",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 9,
-    "TotalV": 0.07,
-    "Stats": {
-      "pts_v": 0.07,
-      "m3_v": 9.0,
-      "reb_v": 4.1,
-      "ast_v": 3.2,
-      "stl_v": 2.7,
-      "blk_v": 1.4,
-      "fg_v": 0.2,
-      "ft_v": 0.439,
-      "to_v": 0.824
-    },
-    "locked": false
-  },
-  {
-    "Name": "Davion Mitchell",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.07,
-    "Stats": {
-      "pts_v": 0.07,
-      "m3_v": 8.0,
-      "reb_v": 2.0,
-      "ast_v": 1.5,
-      "stl_v": 8.3,
-      "blk_v": 1.4,
-      "fg_v": 0.6,
-      "ft_v": 0.5,
-      "to_v": 12.0
-    },
-    "locked": false
-  },
-  {
     "Name": "Ayo Dosunmu",
     "Pos": "SG",
     "Cost": 1.0,
     "G": 9,
-    "TotalV": 0.07,
+    "TotalV": 0.06,
     "Stats": {
-      "pts_v": 0.07,
+      "pts_v": 0.06,
       "m3_v": 9.0,
       "reb_v": 1.4,
       "ast_v": 5.3,
@@ -954,9 +935,9 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": 0.05,
+    "TotalV": 0.06,
     "Stats": {
-      "pts_v": 0.05,
+      "pts_v": 0.06,
       "m3_v": 8.0,
       "reb_v": 2.0,
       "ast_v": 6.9,
@@ -965,6 +946,25 @@
       "fg_v": 0.5,
       "ft_v": 0.474,
       "to_v": 0.732
+    },
+    "locked": false
+  },
+  {
+    "Name": "Davion Mitchell",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": 0.05,
+    "Stats": {
+      "pts_v": 0.05,
+      "m3_v": 9.0,
+      "reb_v": 2.2,
+      "ast_v": 1.6,
+      "stl_v": 8.2,
+      "blk_v": 1.3,
+      "fg_v": 0.6,
+      "ft_v": 0.5,
+      "to_v": 12.7
     },
     "locked": false
   },
@@ -1030,9 +1030,9 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 1,
-    "TotalV": 0.04,
+    "TotalV": 0.03,
     "Stats": {
-      "pts_v": 0.04,
+      "pts_v": 0.03,
       "m3_v": 1.0,
       "reb_v": 10.0,
       "ast_v": 2.0,
@@ -1045,13 +1045,32 @@
     "locked": false
   },
   {
+    "Name": "Yaxel Lendeborg",
+    "Pos": "SF",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": 0.03,
+    "Stats": {
+      "pts_v": 0.03,
+      "m3_v": 9.0,
+      "reb_v": 2.3,
+      "ast_v": 7.1,
+      "stl_v": 4.1,
+      "blk_v": 1.1,
+      "fg_v": 0.6,
+      "ft_v": 0.492,
+      "to_v": 14.0
+    },
+    "locked": false
+  },
+  {
     "Name": "Cameron Boozer",
     "Pos": "PF",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": 0.04,
+    "TotalV": 0.03,
     "Stats": {
-      "pts_v": 0.04,
+      "pts_v": 0.03,
       "m3_v": 8.0,
       "reb_v": 2.3,
       "ast_v": 9.8,
@@ -1064,32 +1083,13 @@
     "locked": false
   },
   {
-    "Name": "Andrew Nembhard",
-    "Pos": "SG",
+    "Name": "Fred VanVleet",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 7,
     "TotalV": 0.02,
     "Stats": {
       "pts_v": 0.02,
-      "m3_v": 7.0,
-      "reb_v": 2.4,
-      "ast_v": 2.1,
-      "stl_v": 7.0,
-      "blk_v": 0.7,
-      "fg_v": 0.1,
-      "ft_v": 0.463,
-      "to_v": 13.6
-    },
-    "locked": false
-  },
-  {
-    "Name": "Fred VanVleet",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": 0.01,
-    "Stats": {
-      "pts_v": 0.01,
       "m3_v": 7.0,
       "reb_v": 13.0,
       "ast_v": 2.6,
@@ -1098,6 +1098,25 @@
       "fg_v": 1.4,
       "ft_v": 0.1,
       "to_v": 0.39
+    },
+    "locked": false
+  },
+  {
+    "Name": "Andrew Nembhard",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": 0.01,
+    "Stats": {
+      "pts_v": 0.01,
+      "m3_v": 7.0,
+      "reb_v": 2.4,
+      "ast_v": 2.1,
+      "stl_v": 6.9,
+      "blk_v": 0.7,
+      "fg_v": 0.1,
+      "ft_v": 0.463,
+      "to_v": 13.6
     },
     "locked": false
   },
@@ -1117,44 +1136,6 @@
       "fg_v": 0.9,
       "ft_v": 0.457,
       "to_v": 13.1
-    },
-    "locked": false
-  },
-  {
-    "Name": "Yaxel Lendeborg",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": 0.0,
-    "Stats": {
-      "pts_v": 0.0,
-      "m3_v": 8.0,
-      "reb_v": 2.5,
-      "ast_v": 7.0,
-      "stl_v": 3.9,
-      "blk_v": 0.9,
-      "fg_v": 0.5,
-      "ft_v": 0.5,
-      "to_v": 14.0
-    },
-    "locked": false
-  },
-  {
-    "Name": "Wendell Carter Jr.",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": 0.0,
-    "Stats": {
-      "pts_v": 0.0,
-      "m3_v": 7.0,
-      "reb_v": 12.4,
-      "ast_v": 0.9,
-      "stl_v": 8.9,
-      "blk_v": 1.0,
-      "fg_v": 1.3,
-      "ft_v": 0.4,
-      "to_v": 0.612
     },
     "locked": false
   },
@@ -1197,25 +1178,6 @@
     "locked": false
   },
   {
-    "Name": "Dyson Daniels",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 9,
-    "TotalV": -0.01,
-    "Stats": {
-      "pts_v": -0.01,
-      "m3_v": 9.0,
-      "reb_v": 9.6,
-      "ast_v": 0.1,
-      "stl_v": 6.8,
-      "blk_v": 4.6,
-      "fg_v": 2.7,
-      "ft_v": 0.3,
-      "to_v": 0.442
-    },
-    "locked": false
-  },
-  {
     "Name": "De'Aaron Fox",
     "Pos": "PG",
     "Cost": 1.0,
@@ -1254,6 +1216,25 @@
     "locked": false
   },
   {
+    "Name": "Dyson Daniels",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": -0.02,
+    "Stats": {
+      "pts_v": -0.02,
+      "m3_v": 9.0,
+      "reb_v": 9.6,
+      "ast_v": 0.1,
+      "stl_v": 6.7,
+      "blk_v": 4.6,
+      "fg_v": 2.7,
+      "ft_v": 0.3,
+      "to_v": 0.442
+    },
+    "locked": false
+  },
+  {
     "Name": "Ja Morant",
     "Pos": "PG",
     "Cost": 1.0,
@@ -1269,25 +1250,6 @@
       "fg_v": 0.0,
       "ft_v": 0.542,
       "to_v": 12.0
-    },
-    "locked": false
-  },
-  {
-    "Name": "Jarrett Allen",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.03,
-    "Stats": {
-      "pts_v": -0.03,
-      "m3_v": 8.0,
-      "reb_v": 13.3,
-      "ast_v": 0.3,
-      "stl_v": 7.8,
-      "blk_v": 1.3,
-      "fg_v": 0.6,
-      "ft_v": 1.5,
-      "to_v": 0.621
     },
     "locked": false
   },
@@ -1311,59 +1273,21 @@
     "locked": false
   },
   {
-    "Name": "Scottie Barnes",
-    "Pos": "PF",
+    "Name": "Jarrett Allen",
+    "Pos": "C",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.04,
+    "TotalV": -0.03,
     "Stats": {
-      "pts_v": -0.04,
+      "pts_v": -0.03,
       "m3_v": 8.0,
-      "reb_v": 0.5,
-      "ast_v": 7.6,
-      "stl_v": 5.1,
-      "blk_v": 2.3,
+      "reb_v": 13.3,
+      "ast_v": 0.3,
+      "stl_v": 7.8,
+      "blk_v": 1.3,
       "fg_v": 0.6,
-      "ft_v": 0.475,
-      "to_v": 0.68
-    },
-    "locked": false
-  },
-  {
-    "Name": "Brandin Podziemski",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 6,
-    "TotalV": -0.04,
-    "Stats": {
-      "pts_v": -0.04,
-      "m3_v": 6.0,
-      "reb_v": 2.3,
-      "ast_v": 5.0,
-      "stl_v": 5.0,
-      "blk_v": 1.2,
-      "fg_v": 0.3,
-      "ft_v": 0.463,
-      "to_v": 13.3
-    },
-    "locked": false
-  },
-  {
-    "Name": "Alex Caruso",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 5,
-    "TotalV": -0.04,
-    "Stats": {
-      "pts_v": -0.04,
-      "m3_v": 5.0,
-      "reb_v": 8.8,
-      "ast_v": 1.8,
-      "stl_v": 4.6,
-      "blk_v": 3.6,
-      "fg_v": 0.8,
-      "ft_v": 0.4,
-      "to_v": 0.538
+      "ft_v": 1.5,
+      "to_v": 0.621
     },
     "locked": false
   },
@@ -1387,13 +1311,32 @@
     "locked": false
   },
   {
+    "Name": "Zach LaVine",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.04,
+    "Stats": {
+      "pts_v": -0.04,
+      "m3_v": 8.0,
+      "reb_v": 2.9,
+      "ast_v": 3.1,
+      "stl_v": 2.6,
+      "blk_v": 1.0,
+      "fg_v": 0.5,
+      "ft_v": 0.496,
+      "to_v": 0.833
+    },
+    "locked": false
+  },
+  {
     "Name": "Joel Embiid",
     "Pos": "C",
     "Cost": 1.0,
     "G": 7,
-    "TotalV": -0.05,
+    "TotalV": -0.04,
     "Stats": {
-      "pts_v": -0.05,
+      "pts_v": -0.04,
       "m3_v": 7.0,
       "reb_v": 0.4,
       "ast_v": 10.0,
@@ -1406,21 +1349,40 @@
     "locked": false
   },
   {
-    "Name": "Zach LaVine",
+    "Name": "Alex Caruso",
     "Pos": "SG",
+    "Cost": 1.0,
+    "G": 5,
+    "TotalV": -0.04,
+    "Stats": {
+      "pts_v": -0.04,
+      "m3_v": 5.0,
+      "reb_v": 8.8,
+      "ast_v": 1.8,
+      "stl_v": 4.6,
+      "blk_v": 3.6,
+      "fg_v": 0.8,
+      "ft_v": 0.4,
+      "to_v": 0.538
+    },
+    "locked": false
+  },
+  {
+    "Name": "Scottie Barnes",
+    "Pos": "PF",
     "Cost": 1.0,
     "G": 8,
     "TotalV": -0.05,
     "Stats": {
       "pts_v": -0.05,
       "m3_v": 8.0,
-      "reb_v": 2.9,
-      "ast_v": 3.1,
-      "stl_v": 2.6,
-      "blk_v": 1.0,
-      "fg_v": 0.5,
-      "ft_v": 0.496,
-      "to_v": 0.833
+      "reb_v": 0.5,
+      "ast_v": 7.6,
+      "stl_v": 5.1,
+      "blk_v": 2.3,
+      "fg_v": 0.6,
+      "ft_v": 0.475,
+      "to_v": 0.68
     },
     "locked": false
   },
@@ -1440,6 +1402,25 @@
       "fg_v": 1.3,
       "ft_v": 0.8,
       "to_v": 0.581
+    },
+    "locked": false
+  },
+  {
+    "Name": "Caleb Wilson",
+    "Pos": "PF",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.05,
+    "Stats": {
+      "pts_v": -0.05,
+      "m3_v": 8.0,
+      "reb_v": 2.4,
+      "ast_v": 6.5,
+      "stl_v": 2.4,
+      "blk_v": 1.9,
+      "fg_v": 1.1,
+      "ft_v": 0.409,
+      "to_v": 0.694
     },
     "locked": false
   },
@@ -1482,21 +1463,40 @@
     "locked": false
   },
   {
-    "Name": "Caleb Wilson",
-    "Pos": "PF",
+    "Name": "Anthony Black",
+    "Pos": "PG",
     "Cost": 1.0,
-    "G": 8,
+    "G": 5,
     "TotalV": -0.06,
     "Stats": {
       "pts_v": -0.06,
-      "m3_v": 8.0,
-      "reb_v": 2.4,
-      "ast_v": 6.5,
-      "stl_v": 2.4,
-      "blk_v": 1.9,
-      "fg_v": 1.1,
-      "ft_v": 0.409,
-      "to_v": 0.694
+      "m3_v": 5.0,
+      "reb_v": 2.0,
+      "ast_v": 5.2,
+      "stl_v": 5.0,
+      "blk_v": 1.2,
+      "fg_v": 0.4,
+      "ft_v": 0.5,
+      "to_v": 9.6
+    },
+    "locked": false
+  },
+  {
+    "Name": "Brandin Podziemski",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.07,
+    "Stats": {
+      "pts_v": -0.07,
+      "m3_v": 7.0,
+      "reb_v": 2.3,
+      "ast_v": 5.1,
+      "stl_v": 4.7,
+      "blk_v": 1.1,
+      "fg_v": 0.4,
+      "ft_v": 0.455,
+      "to_v": 12.6
     },
     "locked": false
   },
@@ -1505,9 +1505,9 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.08,
+    "TotalV": -0.07,
     "Stats": {
-      "pts_v": -0.08,
+      "pts_v": -0.07,
       "m3_v": 8.0,
       "reb_v": 1.8,
       "ast_v": 3.9,
@@ -1516,6 +1516,25 @@
       "fg_v": 0.1,
       "ft_v": 0.511,
       "to_v": 11.3
+    },
+    "locked": false
+  },
+  {
+    "Name": "LaMelo Ball",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": -0.08,
+    "Stats": {
+      "pts_v": -0.08,
+      "m3_v": 9.0,
+      "reb_v": 3.3,
+      "ast_v": 3.4,
+      "stl_v": 5.9,
+      "blk_v": 1.9,
+      "fg_v": 0.1,
+      "ft_v": 0.438,
+      "to_v": 13.4
     },
     "locked": false
   },
@@ -1558,44 +1577,6 @@
     "locked": false
   },
   {
-    "Name": "Daniel Gafford",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.08,
-    "Stats": {
-      "pts_v": -0.08,
-      "m3_v": 8.0,
-      "reb_v": 9.1,
-      "ast_v": 0.1,
-      "stl_v": 6.6,
-      "blk_v": 2.0,
-      "fg_v": 0.9,
-      "ft_v": 1.9,
-      "to_v": 0.674
-    },
-    "locked": false
-  },
-  {
-    "Name": "LaMelo Ball",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 9,
-    "TotalV": -0.08,
-    "Stats": {
-      "pts_v": -0.08,
-      "m3_v": 9.0,
-      "reb_v": 3.3,
-      "ast_v": 3.4,
-      "stl_v": 5.9,
-      "blk_v": 1.9,
-      "fg_v": 0.1,
-      "ft_v": 0.438,
-      "to_v": 13.4
-    },
-    "locked": false
-  },
-  {
     "Name": "Damian Lillard",
     "Pos": "PG",
     "Cost": 1.0,
@@ -1611,6 +1592,25 @@
       "fg_v": 0.1,
       "ft_v": 0.42,
       "to_v": 14.3
+    },
+    "locked": false
+  },
+  {
+    "Name": "Daniel Gafford",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.08,
+    "Stats": {
+      "pts_v": -0.08,
+      "m3_v": 8.0,
+      "reb_v": 9.1,
+      "ast_v": 0.1,
+      "stl_v": 6.6,
+      "blk_v": 2.0,
+      "fg_v": 0.9,
+      "ft_v": 1.9,
+      "to_v": 0.674
     },
     "locked": false
   },
@@ -1653,25 +1653,6 @@
     "locked": false
   },
   {
-    "Name": "De'Anthony Melton",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.1,
-    "Stats": {
-      "pts_v": -0.1,
-      "m3_v": 8.0,
-      "reb_v": 10.6,
-      "ast_v": 2.4,
-      "stl_v": 4.5,
-      "blk_v": 2.3,
-      "fg_v": 1.5,
-      "ft_v": 0.4,
-      "to_v": 0.435
-    },
-    "locked": false
-  },
-  {
     "Name": "Jonathan Kuminga",
     "Pos": "PF",
     "Cost": 1.0,
@@ -1691,20 +1672,20 @@
     "locked": false
   },
   {
-    "Name": "Kyshawn George",
-    "Pos": "SG",
+    "Name": "James Harden",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 8,
     "TotalV": -0.11,
     "Stats": {
       "pts_v": -0.11,
       "m3_v": 8.0,
-      "reb_v": 1.9,
-      "ast_v": 4.3,
-      "stl_v": 4.9,
-      "blk_v": 0.5,
-      "fg_v": 1.1,
-      "ft_v": 0.515,
+      "reb_v": 2.6,
+      "ast_v": 5.3,
+      "stl_v": 6.3,
+      "blk_v": 0.9,
+      "fg_v": 0.5,
+      "ft_v": 0.379,
       "to_v": 12.9
     },
     "locked": false
@@ -1729,39 +1710,20 @@
     "locked": false
   },
   {
-    "Name": "VJ Edgecombe",
+    "Name": "Kyshawn George",
     "Pos": "SG",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.13,
+    "TotalV": -0.11,
     "Stats": {
-      "pts_v": -0.13,
+      "pts_v": -0.11,
       "m3_v": 8.0,
-      "reb_v": 12.5,
-      "ast_v": 1.6,
-      "stl_v": 7.0,
-      "blk_v": 3.0,
+      "reb_v": 1.9,
+      "ast_v": 4.3,
+      "stl_v": 4.9,
+      "blk_v": 0.5,
       "fg_v": 1.1,
-      "ft_v": 0.5,
-      "to_v": 0.444
-    },
-    "locked": false
-  },
-  {
-    "Name": "James Harden",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.13,
-    "Stats": {
-      "pts_v": -0.13,
-      "m3_v": 8.0,
-      "reb_v": 2.6,
-      "ast_v": 5.3,
-      "stl_v": 6.3,
-      "blk_v": 0.8,
-      "fg_v": 0.5,
-      "ft_v": 0.379,
+      "ft_v": 0.515,
       "to_v": 12.9
     },
     "locked": false
@@ -1786,6 +1748,25 @@
     "locked": false
   },
   {
+    "Name": "VJ Edgecombe",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.13,
+    "Stats": {
+      "pts_v": -0.13,
+      "m3_v": 8.0,
+      "reb_v": 12.5,
+      "ast_v": 1.6,
+      "stl_v": 7.0,
+      "blk_v": 3.0,
+      "fg_v": 1.1,
+      "ft_v": 0.5,
+      "to_v": 0.444
+    },
+    "locked": false
+  },
+  {
     "Name": "Trey Murphy",
     "Pos": "SF",
     "Cost": 1.0,
@@ -1801,44 +1782,6 @@
       "fg_v": 0.9,
       "ft_v": 0.1,
       "to_v": 0.455
-    },
-    "locked": false
-  },
-  {
-    "Name": "Jalen Smith",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.14,
-    "Stats": {
-      "pts_v": -0.14,
-      "m3_v": 8.0,
-      "reb_v": 11.0,
-      "ast_v": 1.4,
-      "stl_v": 7.8,
-      "blk_v": 1.8,
-      "fg_v": 0.4,
-      "ft_v": 0.9,
-      "to_v": 0.472
-    },
-    "locked": false
-  },
-  {
-    "Name": "Justin Champagnie",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 4,
-    "TotalV": -0.14,
-    "Stats": {
-      "pts_v": -0.14,
-      "m3_v": 4.0,
-      "reb_v": 7.3,
-      "ast_v": 0.5,
-      "stl_v": 7.5,
-      "blk_v": 1.3,
-      "fg_v": 0.5,
-      "ft_v": 0.5,
-      "to_v": 0.6
     },
     "locked": false
   },
@@ -1862,13 +1805,51 @@
     "locked": false
   },
   {
+    "Name": "Jalen Smith",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.15,
+    "Stats": {
+      "pts_v": -0.15,
+      "m3_v": 8.0,
+      "reb_v": 11.0,
+      "ast_v": 1.4,
+      "stl_v": 7.8,
+      "blk_v": 1.8,
+      "fg_v": 0.4,
+      "ft_v": 0.9,
+      "to_v": 0.472
+    },
+    "locked": false
+  },
+  {
+    "Name": "De'Anthony Melton",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": -0.15,
+    "Stats": {
+      "pts_v": -0.15,
+      "m3_v": 9.0,
+      "reb_v": 10.0,
+      "ast_v": 2.1,
+      "stl_v": 4.7,
+      "blk_v": 2.2,
+      "fg_v": 1.7,
+      "ft_v": 0.3,
+      "to_v": 0.418
+    },
+    "locked": false
+  },
+  {
     "Name": "Cam Spencer",
     "Pos": "SG",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.14,
+    "TotalV": -0.15,
     "Stats": {
-      "pts_v": -0.14,
+      "pts_v": -0.15,
       "m3_v": 8.0,
       "reb_v": 9.1,
       "ast_v": 1.9,
@@ -1881,59 +1862,21 @@
     "locked": false
   },
   {
-    "Name": "Desmond Bane",
-    "Pos": "SG",
+    "Name": "Justin Champagnie",
+    "Pos": "SF",
     "Cost": 1.0,
-    "G": 7,
+    "G": 4,
     "TotalV": -0.15,
     "Stats": {
       "pts_v": -0.15,
-      "m3_v": 7.0,
-      "reb_v": 3.6,
-      "ast_v": 3.6,
-      "stl_v": 2.6,
-      "blk_v": 1.0,
-      "fg_v": 0.9,
-      "ft_v": 0.386,
-      "to_v": 14.4
-    },
-    "locked": false
-  },
-  {
-    "Name": "Mo Bamba",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 5,
-    "TotalV": -0.16,
-    "Stats": {
-      "pts_v": -0.16,
-      "m3_v": 5.0,
-      "reb_v": 8.6,
-      "ast_v": 0.0,
-      "stl_v": 6.6,
-      "blk_v": 0.6,
-      "fg_v": 0.2,
-      "ft_v": 1.6,
-      "to_v": 0.731
-    },
-    "locked": false
-  },
-  {
-    "Name": "Alexandre Sarr",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": -0.16,
-    "Stats": {
-      "pts_v": -0.16,
-      "m3_v": 7.0,
-      "reb_v": 9.6,
-      "ast_v": 0.6,
-      "stl_v": 6.0,
-      "blk_v": 2.0,
-      "fg_v": 1.1,
-      "ft_v": 1.0,
-      "to_v": 0.521
+      "m3_v": 4.0,
+      "reb_v": 7.3,
+      "ast_v": 0.5,
+      "stl_v": 7.5,
+      "blk_v": 1.3,
+      "fg_v": 0.5,
+      "ft_v": 0.5,
+      "to_v": 0.6
     },
     "locked": false
   },
@@ -1957,21 +1900,40 @@
     "locked": false
   },
   {
-    "Name": "Ace Bailey",
-    "Pos": "SF",
+    "Name": "Alexandre Sarr",
+    "Pos": "C",
     "Cost": 1.0,
-    "G": 8,
+    "G": 7,
     "TotalV": -0.16,
     "Stats": {
       "pts_v": -0.16,
-      "m3_v": 8.0,
-      "reb_v": 12.5,
-      "ast_v": 1.4,
-      "stl_v": 7.3,
+      "m3_v": 7.0,
+      "reb_v": 9.6,
+      "ast_v": 0.6,
+      "stl_v": 6.0,
       "blk_v": 2.0,
-      "fg_v": 0.4,
-      "ft_v": 1.5,
-      "to_v": 0.452
+      "fg_v": 1.1,
+      "ft_v": 1.0,
+      "to_v": 0.521
+    },
+    "locked": false
+  },
+  {
+    "Name": "Mo Bamba",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 5,
+    "TotalV": -0.16,
+    "Stats": {
+      "pts_v": -0.16,
+      "m3_v": 5.0,
+      "reb_v": 8.6,
+      "ast_v": 0.0,
+      "stl_v": 6.6,
+      "blk_v": 0.6,
+      "fg_v": 0.2,
+      "ft_v": 1.6,
+      "to_v": 0.731
     },
     "locked": false
   },
@@ -1991,6 +1953,25 @@
       "fg_v": 1.4,
       "ft_v": 0.4,
       "to_v": 0.425
+    },
+    "locked": false
+  },
+  {
+    "Name": "Ace Bailey",
+    "Pos": "SF",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.16,
+    "Stats": {
+      "pts_v": -0.16,
+      "m3_v": 8.0,
+      "reb_v": 12.5,
+      "ast_v": 1.4,
+      "stl_v": 7.3,
+      "blk_v": 2.0,
+      "fg_v": 0.4,
+      "ft_v": 1.5,
+      "to_v": 0.452
     },
     "locked": false
   },
@@ -2033,6 +2014,25 @@
     "locked": false
   },
   {
+    "Name": "Darius Acuff Jr.",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.17,
+    "Stats": {
+      "pts_v": -0.17,
+      "m3_v": 8.0,
+      "reb_v": 3.0,
+      "ast_v": 3.8,
+      "stl_v": 7.0,
+      "blk_v": 0.8,
+      "fg_v": 0.1,
+      "ft_v": 0.397,
+      "to_v": 0.838
+    },
+    "locked": false
+  },
+  {
     "Name": "Toumani Camara",
     "Pos": "PF",
     "Cost": 1.0,
@@ -2048,6 +2048,25 @@
       "fg_v": 1.0,
       "ft_v": 0.3,
       "to_v": 0.532
+    },
+    "locked": false
+  },
+  {
+    "Name": "Aaron Wiggins",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": -0.17,
+    "Stats": {
+      "pts_v": -0.17,
+      "m3_v": 9.0,
+      "reb_v": 13.9,
+      "ast_v": 2.7,
+      "stl_v": 3.7,
+      "blk_v": 1.9,
+      "fg_v": 1.1,
+      "ft_v": 0.4,
+      "to_v": 0.457
     },
     "locked": false
   },
@@ -2071,25 +2090,6 @@
     "locked": false
   },
   {
-    "Name": "Darius Acuff Jr.",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.17,
-    "Stats": {
-      "pts_v": -0.17,
-      "m3_v": 8.0,
-      "reb_v": 3.0,
-      "ast_v": 3.8,
-      "stl_v": 7.0,
-      "blk_v": 0.8,
-      "fg_v": 0.1,
-      "ft_v": 0.397,
-      "to_v": 0.838
-    },
-    "locked": false
-  },
-  {
     "Name": "Matisse Thybulle",
     "Pos": "SG",
     "Cost": 1.0,
@@ -2109,21 +2109,21 @@
     "locked": false
   },
   {
-    "Name": "Aaron Wiggins",
-    "Pos": "SG",
+    "Name": "Brandon Miller",
+    "Pos": "SF",
     "Cost": 1.0,
     "G": 9,
     "TotalV": -0.18,
     "Stats": {
       "pts_v": -0.18,
       "m3_v": 9.0,
-      "reb_v": 13.9,
-      "ast_v": 2.7,
-      "stl_v": 3.7,
-      "blk_v": 1.9,
-      "fg_v": 1.1,
-      "ft_v": 0.4,
-      "to_v": 0.453
+      "reb_v": 3.0,
+      "ast_v": 5.3,
+      "stl_v": 2.3,
+      "blk_v": 1.1,
+      "fg_v": 0.8,
+      "ft_v": 0.359,
+      "to_v": 0.861
     },
     "locked": false
   },
@@ -2147,26 +2147,7 @@
     "locked": false
   },
   {
-    "Name": "Brandon Miller",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 9,
-    "TotalV": -0.19,
-    "Stats": {
-      "pts_v": -0.19,
-      "m3_v": 9.0,
-      "reb_v": 3.0,
-      "ast_v": 5.3,
-      "stl_v": 2.3,
-      "blk_v": 1.1,
-      "fg_v": 0.8,
-      "ft_v": 0.359,
-      "to_v": 0.861
-    },
-    "locked": false
-  },
-  {
-    "Name": "Ausar Thompson",
+    "Name": "Dillon Brooks",
     "Pos": "SF",
     "Cost": 1.0,
     "G": 7,
@@ -2174,13 +2155,13 @@
     "Stats": {
       "pts_v": -0.19,
       "m3_v": 7.0,
-      "reb_v": 9.9,
-      "ast_v": 0.0,
-      "stl_v": 8.6,
-      "blk_v": 4.7,
-      "fg_v": 1.1,
-      "ft_v": 0.6,
-      "to_v": 0.528
+      "reb_v": 2.1,
+      "ast_v": 3.9,
+      "stl_v": 2.7,
+      "blk_v": 1.0,
+      "fg_v": 0.3,
+      "ft_v": 0.5,
+      "to_v": 12.6
     },
     "locked": false
   },
@@ -2227,9 +2208,9 @@
     "Pos": "C",
     "Cost": 1.0,
     "G": 6,
-    "TotalV": -0.19,
+    "TotalV": -0.2,
     "Stats": {
-      "pts_v": -0.19,
+      "pts_v": -0.2,
       "m3_v": 6.0,
       "reb_v": 7.2,
       "ast_v": 0.0,
@@ -2246,9 +2227,9 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.19,
+    "TotalV": -0.2,
     "Stats": {
-      "pts_v": -0.19,
+      "pts_v": -0.2,
       "m3_v": 8.0,
       "reb_v": 7.9,
       "ast_v": 0.4,
@@ -2270,12 +2251,31 @@
       "pts_v": -0.2,
       "m3_v": 8.0,
       "reb_v": 1.3,
-      "ast_v": 7.0,
+      "ast_v": 7.1,
       "stl_v": 3.8,
       "blk_v": 1.0,
       "fg_v": 0.1,
       "ft_v": 0.512,
       "to_v": 0.667
+    },
+    "locked": false
+  },
+  {
+    "Name": "Desmond Bane",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.2,
+    "Stats": {
+      "pts_v": -0.2,
+      "m3_v": 8.0,
+      "reb_v": 3.5,
+      "ast_v": 3.9,
+      "stl_v": 2.3,
+      "blk_v": 0.9,
+      "fg_v": 0.8,
+      "ft_v": 0.389,
+      "to_v": 14.1
     },
     "locked": false
   },
@@ -2318,44 +2318,6 @@
     "locked": false
   },
   {
-    "Name": "Jordan Goodwin",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 5,
-    "TotalV": -0.21,
-    "Stats": {
-      "pts_v": -0.21,
-      "m3_v": 5.0,
-      "reb_v": 7.8,
-      "ast_v": 1.8,
-      "stl_v": 3.4,
-      "blk_v": 2.6,
-      "fg_v": 1.6,
-      "ft_v": 0.0,
-      "to_v": 0.441
-    },
-    "locked": false
-  },
-  {
-    "Name": "Precious Achiuwa",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.21,
-    "Stats": {
-      "pts_v": -0.21,
-      "m3_v": 8.0,
-      "reb_v": 11.0,
-      "ast_v": 0.3,
-      "stl_v": 6.1,
-      "blk_v": 1.3,
-      "fg_v": 1.6,
-      "ft_v": 1.1,
-      "to_v": 0.549
-    },
-    "locked": false
-  },
-  {
     "Name": "Julius Randle",
     "Pos": "PF",
     "Cost": 1.0,
@@ -2394,6 +2356,25 @@
     "locked": false
   },
   {
+    "Name": "Jordan Goodwin",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 5,
+    "TotalV": -0.22,
+    "Stats": {
+      "pts_v": -0.22,
+      "m3_v": 5.0,
+      "reb_v": 7.8,
+      "ast_v": 1.8,
+      "stl_v": 3.4,
+      "blk_v": 2.6,
+      "fg_v": 1.6,
+      "ft_v": 0.0,
+      "to_v": 0.441
+    },
+    "locked": false
+  },
+  {
     "Name": "Zaccharie Risacher",
     "Pos": "SF",
     "Cost": 1.0,
@@ -2409,6 +2390,63 @@
       "fg_v": 1.8,
       "ft_v": 1.3,
       "to_v": 0.361
+    },
+    "locked": false
+  },
+  {
+    "Name": "Precious Achiuwa",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.22,
+    "Stats": {
+      "pts_v": -0.22,
+      "m3_v": 8.0,
+      "reb_v": 11.0,
+      "ast_v": 0.3,
+      "stl_v": 6.1,
+      "blk_v": 1.3,
+      "fg_v": 1.6,
+      "ft_v": 1.1,
+      "to_v": 0.549
+    },
+    "locked": false
+  },
+  {
+    "Name": "Ausar Thompson",
+    "Pos": "SF",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.22,
+    "Stats": {
+      "pts_v": -0.22,
+      "m3_v": 7.0,
+      "reb_v": 9.9,
+      "ast_v": 0.0,
+      "stl_v": 8.6,
+      "blk_v": 4.7,
+      "fg_v": 1.0,
+      "ft_v": 0.6,
+      "to_v": 0.528
+    },
+    "locked": false
+  },
+  {
+    "Name": "Pelle Larsson",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": -0.22,
+    "Stats": {
+      "pts_v": -0.22,
+      "m3_v": 9.0,
+      "reb_v": 11.1,
+      "ast_v": 1.1,
+      "stl_v": 3.1,
+      "blk_v": 3.8,
+      "fg_v": 1.3,
+      "ft_v": 0.1,
+      "to_v": 0.444
     },
     "locked": false
   },
@@ -2432,32 +2470,13 @@
     "locked": false
   },
   {
-    "Name": "Keyonte George",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.22,
-    "Stats": {
-      "pts_v": -0.22,
-      "m3_v": 8.0,
-      "reb_v": 2.1,
-      "ast_v": 4.0,
-      "stl_v": 5.9,
-      "blk_v": 1.0,
-      "fg_v": 0.1,
-      "ft_v": 0.457,
-      "to_v": 0.774
-    },
-    "locked": false
-  },
-  {
     "Name": "Ja'Kobe Walter",
     "Pos": "SG",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.22,
+    "TotalV": -0.23,
     "Stats": {
-      "pts_v": -0.22,
+      "pts_v": -0.23,
       "m3_v": 8.0,
       "reb_v": 11.4,
       "ast_v": 2.3,
@@ -2489,21 +2508,21 @@
     "locked": false
   },
   {
-    "Name": "Pelle Larsson",
-    "Pos": "SG",
+    "Name": "Keyonte George",
+    "Pos": "PG",
     "Cost": 1.0,
     "G": 8,
     "TotalV": -0.23,
     "Stats": {
       "pts_v": -0.23,
       "m3_v": 8.0,
-      "reb_v": 10.9,
-      "ast_v": 0.9,
-      "stl_v": 3.4,
-      "blk_v": 3.8,
-      "fg_v": 1.1,
-      "ft_v": 0.1,
-      "to_v": 0.444
+      "reb_v": 2.1,
+      "ast_v": 4.0,
+      "stl_v": 5.9,
+      "blk_v": 1.0,
+      "fg_v": 0.1,
+      "ft_v": 0.454,
+      "to_v": 0.774
     },
     "locked": false
   },
@@ -2512,9 +2531,9 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 7,
-    "TotalV": -0.23,
+    "TotalV": -0.24,
     "Stats": {
-      "pts_v": -0.23,
+      "pts_v": -0.24,
       "m3_v": 7.0,
       "reb_v": 1.7,
       "ast_v": 6.4,
@@ -2523,25 +2542,6 @@
       "fg_v": 0.1,
       "ft_v": 0.478,
       "to_v": 0.667
-    },
-    "locked": false
-  },
-  {
-    "Name": "Bobby Portis",
-    "Pos": "PF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.24,
-    "Stats": {
-      "pts_v": -0.24,
-      "m3_v": 8.0,
-      "reb_v": 8.3,
-      "ast_v": 1.5,
-      "stl_v": 7.1,
-      "blk_v": 2.1,
-      "fg_v": 0.9,
-      "ft_v": 0.6,
-      "to_v": 0.397
     },
     "locked": false
   },
@@ -2622,44 +2622,6 @@
     "locked": false
   },
   {
-    "Name": "Dean Wade",
-    "Pos": "PF",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": -0.26,
-    "Stats": {
-      "pts_v": -0.26,
-      "m3_v": 7.0,
-      "reb_v": 4.1,
-      "ast_v": 0.7,
-      "stl_v": 3.1,
-      "blk_v": 2.1,
-      "fg_v": 1.9,
-      "ft_v": 0.6,
-      "to_v": 0.5
-    },
-    "locked": false
-  },
-  {
-    "Name": "Zach Edey",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": -0.26,
-    "Stats": {
-      "pts_v": -0.26,
-      "m3_v": 7.0,
-      "reb_v": 7.4,
-      "ast_v": 0.1,
-      "stl_v": 8.1,
-      "blk_v": 1.0,
-      "fg_v": 0.1,
-      "ft_v": 1.6,
-      "to_v": 0.553
-    },
-    "locked": false
-  },
-  {
     "Name": "Meleek Thomas",
     "Pos": "SG",
     "Cost": 1.0,
@@ -2675,6 +2637,63 @@
       "fg_v": 1.0,
       "ft_v": 0.2,
       "to_v": 0.463
+    },
+    "locked": false
+  },
+  {
+    "Name": "Zach Edey",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.27,
+    "Stats": {
+      "pts_v": -0.27,
+      "m3_v": 7.0,
+      "reb_v": 7.4,
+      "ast_v": 0.1,
+      "stl_v": 8.1,
+      "blk_v": 1.0,
+      "fg_v": 0.1,
+      "ft_v": 1.6,
+      "to_v": 0.553
+    },
+    "locked": false
+  },
+  {
+    "Name": "Jaylen Wells",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.27,
+    "Stats": {
+      "pts_v": -0.27,
+      "m3_v": 8.0,
+      "reb_v": 11.1,
+      "ast_v": 1.8,
+      "stl_v": 3.4,
+      "blk_v": 1.5,
+      "fg_v": 1.0,
+      "ft_v": 0.1,
+      "to_v": 0.524
+    },
+    "locked": false
+  },
+  {
+    "Name": "Dean Wade",
+    "Pos": "PF",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.27,
+    "Stats": {
+      "pts_v": -0.27,
+      "m3_v": 7.0,
+      "reb_v": 4.1,
+      "ast_v": 0.7,
+      "stl_v": 3.1,
+      "blk_v": 2.1,
+      "fg_v": 1.9,
+      "ft_v": 0.6,
+      "to_v": 0.476
     },
     "locked": false
   },
@@ -2698,40 +2717,21 @@
     "locked": false
   },
   {
-    "Name": "Jaylen Wells",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.27,
-    "Stats": {
-      "pts_v": -0.27,
-      "m3_v": 8.0,
-      "reb_v": 11.1,
-      "ast_v": 1.8,
-      "stl_v": 3.3,
-      "blk_v": 1.5,
-      "fg_v": 1.0,
-      "ft_v": 0.1,
-      "to_v": 0.524
-    },
-    "locked": false
-  },
-  {
-    "Name": "Tristan da Silva",
+    "Name": "Franz Wagner",
     "Pos": "SF",
     "Cost": 1.0,
-    "G": 7,
+    "G": 8,
     "TotalV": -0.28,
     "Stats": {
       "pts_v": -0.28,
-      "m3_v": 7.0,
-      "reb_v": 14.1,
-      "ast_v": 3.3,
-      "stl_v": 3.4,
-      "blk_v": 1.7,
-      "fg_v": 0.3,
-      "ft_v": 0.4,
-      "to_v": 0.5
+      "m3_v": 8.0,
+      "reb_v": 0.9,
+      "ast_v": 6.4,
+      "stl_v": 8.5,
+      "blk_v": 1.3,
+      "fg_v": 0.0,
+      "ft_v": 0.431,
+      "to_v": 0.744
     },
     "locked": false
   },
@@ -2774,6 +2774,25 @@
     "locked": false
   },
   {
+    "Name": "Norman Powell",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.29,
+    "Stats": {
+      "pts_v": -0.29,
+      "m3_v": 8.0,
+      "reb_v": 2.1,
+      "ast_v": 2.5,
+      "stl_v": 1.6,
+      "blk_v": 1.6,
+      "fg_v": 0.0,
+      "ft_v": 0.398,
+      "to_v": 12.9
+    },
+    "locked": false
+  },
+  {
     "Name": "Nolan Traore",
     "Pos": "PG",
     "Cost": 1.0,
@@ -2789,25 +2808,6 @@
       "fg_v": 1.1,
       "ft_v": 0.6,
       "to_v": 0.5
-    },
-    "locked": false
-  },
-  {
-    "Name": "Norman Powell",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.3,
-    "Stats": {
-      "pts_v": -0.3,
-      "m3_v": 8.0,
-      "reb_v": 2.1,
-      "ast_v": 2.5,
-      "stl_v": 1.6,
-      "blk_v": 1.6,
-      "fg_v": 0.0,
-      "ft_v": 0.398,
-      "to_v": 12.9
     },
     "locked": false
   },
@@ -2831,40 +2831,21 @@
     "locked": false
   },
   {
-    "Name": "Max Strus",
+    "Name": "Peyton Watson",
     "Pos": "SF",
     "Cost": 1.0,
-    "G": 2,
+    "G": 6,
     "TotalV": -0.3,
     "Stats": {
       "pts_v": -0.3,
-      "m3_v": 2.0,
-      "reb_v": 10.0,
-      "ast_v": 3.0,
-      "stl_v": 4.5,
-      "blk_v": 5.5,
-      "fg_v": 1.0,
-      "ft_v": 0.0,
-      "to_v": 0.286
-    },
-    "locked": false
-  },
-  {
-    "Name": "Klay Thompson",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.3,
-    "Stats": {
-      "pts_v": -0.3,
-      "m3_v": 8.0,
-      "reb_v": 14.1,
-      "ast_v": 3.9,
-      "stl_v": 1.8,
-      "blk_v": 1.5,
-      "fg_v": 0.1,
-      "ft_v": 0.3,
-      "to_v": 0.455
+      "m3_v": 6.0,
+      "reb_v": 10.8,
+      "ast_v": 0.7,
+      "stl_v": 4.0,
+      "blk_v": 3.0,
+      "fg_v": 1.2,
+      "ft_v": 1.8,
+      "to_v": 0.371
     },
     "locked": false
   },
@@ -2888,21 +2869,40 @@
     "locked": false
   },
   {
-    "Name": "Peyton Watson",
+    "Name": "Max Strus",
     "Pos": "SF",
     "Cost": 1.0,
-    "G": 6,
+    "G": 2,
     "TotalV": -0.31,
     "Stats": {
       "pts_v": -0.31,
-      "m3_v": 6.0,
-      "reb_v": 10.8,
-      "ast_v": 0.7,
-      "stl_v": 4.0,
-      "blk_v": 3.0,
-      "fg_v": 1.2,
-      "ft_v": 1.8,
-      "to_v": 0.371
+      "m3_v": 2.0,
+      "reb_v": 10.0,
+      "ast_v": 3.0,
+      "stl_v": 4.5,
+      "blk_v": 5.5,
+      "fg_v": 1.0,
+      "ft_v": 0.0,
+      "to_v": 0.286
+    },
+    "locked": false
+  },
+  {
+    "Name": "Danny Wolf",
+    "Pos": "PF",
+    "Cost": 1.0,
+    "G": 3,
+    "TotalV": -0.31,
+    "Stats": {
+      "pts_v": -0.31,
+      "m3_v": 3.0,
+      "reb_v": 9.3,
+      "ast_v": 2.3,
+      "stl_v": 4.3,
+      "blk_v": 2.0,
+      "fg_v": 0.0,
+      "ft_v": 0.0,
+      "to_v": 0.6
     },
     "locked": false
   },
@@ -2926,6 +2926,25 @@
     "locked": false
   },
   {
+    "Name": "Tristan da Silva",
+    "Pos": "SF",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.32,
+    "Stats": {
+      "pts_v": -0.32,
+      "m3_v": 8.0,
+      "reb_v": 14.6,
+      "ast_v": 3.4,
+      "stl_v": 3.3,
+      "blk_v": 1.6,
+      "fg_v": 0.3,
+      "ft_v": 0.4,
+      "to_v": 0.484
+    },
+    "locked": false
+  },
+  {
     "Name": "Isaiah Jackson",
     "Pos": "C",
     "Cost": 1.0,
@@ -2945,40 +2964,21 @@
     "locked": false
   },
   {
-    "Name": "Dillon Brooks",
-    "Pos": "SF",
+    "Name": "Bobby Portis",
+    "Pos": "PF",
     "Cost": 1.0,
-    "G": 6,
+    "G": 9,
     "TotalV": -0.33,
     "Stats": {
       "pts_v": -0.33,
-      "m3_v": 6.0,
-      "reb_v": 1.8,
-      "ast_v": 4.3,
-      "stl_v": 3.0,
-      "blk_v": 0.8,
-      "fg_v": 0.2,
-      "ft_v": 0.486,
-      "to_v": 12.0
-    },
-    "locked": false
-  },
-  {
-    "Name": "Franz Wagner",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": -0.33,
-    "Stats": {
-      "pts_v": -0.33,
-      "m3_v": 7.0,
-      "reb_v": 1.0,
-      "ast_v": 6.1,
-      "stl_v": 7.6,
-      "blk_v": 0.9,
-      "fg_v": 0.0,
-      "ft_v": 0.419,
-      "to_v": 0.795
+      "m3_v": 9.0,
+      "reb_v": 7.3,
+      "ast_v": 1.3,
+      "stl_v": 6.9,
+      "blk_v": 1.9,
+      "fg_v": 0.8,
+      "ft_v": 0.6,
+      "to_v": 0.379
     },
     "locked": false
   },
@@ -3021,21 +3021,21 @@
     "locked": false
   },
   {
-    "Name": "Danny Wolf",
-    "Pos": "PF",
+    "Name": "Klay Thompson",
+    "Pos": "SF",
     "Cost": 1.0,
-    "G": 3,
+    "G": 9,
     "TotalV": -0.33,
     "Stats": {
       "pts_v": -0.33,
-      "m3_v": 3.0,
-      "reb_v": 9.0,
-      "ast_v": 2.3,
-      "stl_v": 4.3,
-      "blk_v": 2.0,
-      "fg_v": 0.0,
-      "ft_v": 0.0,
-      "to_v": 0.6
+      "m3_v": 9.0,
+      "reb_v": 13.8,
+      "ast_v": 3.7,
+      "stl_v": 1.6,
+      "blk_v": 1.7,
+      "fg_v": 0.1,
+      "ft_v": 0.4,
+      "to_v": 0.439
     },
     "locked": false
   },
@@ -3078,25 +3078,6 @@
     "locked": false
   },
   {
-    "Name": "Tre Jones",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.36,
-    "Stats": {
-      "pts_v": -0.36,
-      "m3_v": 8.0,
-      "reb_v": 10.9,
-      "ast_v": 0.4,
-      "stl_v": 2.9,
-      "blk_v": 3.1,
-      "fg_v": 1.1,
-      "ft_v": 0.1,
-      "to_v": 0.509
-    },
-    "locked": false
-  },
-  {
     "Name": "Marcus Smart",
     "Pos": "PG",
     "Cost": 1.0,
@@ -3116,40 +3097,59 @@
     "locked": false
   },
   {
-    "Name": "Collin Gillespie",
+    "Name": "Tre Jones",
     "Pos": "PG",
     "Cost": 1.0,
-    "G": 6,
+    "G": 8,
     "TotalV": -0.36,
     "Stats": {
       "pts_v": -0.36,
-      "m3_v": 6.0,
-      "reb_v": 6.8,
-      "ast_v": 1.7,
-      "stl_v": 2.2,
-      "blk_v": 4.5,
-      "fg_v": 2.7,
-      "ft_v": 0.2,
-      "to_v": 0.313
+      "m3_v": 8.0,
+      "reb_v": 10.9,
+      "ast_v": 0.4,
+      "stl_v": 2.9,
+      "blk_v": 3.1,
+      "fg_v": 1.1,
+      "ft_v": 0.1,
+      "to_v": 0.509
     },
     "locked": false
   },
   {
-    "Name": "Bones Hyland",
+    "Name": "Collin Gillespie",
     "Pos": "PG",
     "Cost": 1.0,
-    "G": 9,
+    "G": 7,
+    "TotalV": -0.36,
+    "Stats": {
+      "pts_v": -0.36,
+      "m3_v": 7.0,
+      "reb_v": 6.7,
+      "ast_v": 1.7,
+      "stl_v": 2.1,
+      "blk_v": 4.1,
+      "fg_v": 2.7,
+      "ft_v": 0.1,
+      "to_v": 0.298
+    },
+    "locked": false
+  },
+  {
+    "Name": "Jaren Jackson Jr.",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 4,
     "TotalV": -0.37,
     "Stats": {
       "pts_v": -0.37,
-      "m3_v": 9.0,
-      "reb_v": 12.4,
-      "ast_v": 8.4,
-      "stl_v": 1.6,
-      "blk_v": 1.2,
-      "fg_v": 2.8,
-      "ft_v": 0.9,
-      "to_v": 0.4
+      "m3_v": 4.0,
+      "reb_v": 1.3,
+      "ast_v": 5.0,
+      "stl_v": 2.0,
+      "blk_v": 0.3,
+      "fg_v": 1.3,
+      "ft_v": 0.5,
+      "to_v": 11.0
     },
     "locked": false
   },
@@ -3173,21 +3173,40 @@
     "locked": false
   },
   {
-    "Name": "Jaren Jackson Jr.",
-    "Pos": "C",
+    "Name": "Bones Hyland",
+    "Pos": "PG",
     "Cost": 1.0,
-    "G": 4,
+    "G": 9,
     "TotalV": -0.38,
     "Stats": {
       "pts_v": -0.38,
-      "m3_v": 4.0,
-      "reb_v": 1.3,
-      "ast_v": 5.0,
-      "stl_v": 2.0,
-      "blk_v": 0.3,
-      "fg_v": 1.3,
-      "ft_v": 0.5,
-      "to_v": 11.0
+      "m3_v": 9.0,
+      "reb_v": 12.4,
+      "ast_v": 8.4,
+      "stl_v": 1.6,
+      "blk_v": 1.2,
+      "fg_v": 2.8,
+      "ft_v": 0.9,
+      "to_v": 0.4
+    },
+    "locked": false
+  },
+  {
+    "Name": "Collin Murray-Boyles",
+    "Pos": "PF",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.38,
+    "Stats": {
+      "pts_v": 8.0,
+      "m3_v": 9.6,
+      "reb_v": 0.6,
+      "ast_v": 4.8,
+      "stl_v": 1.3,
+      "blk_v": 0.9,
+      "fg_v": 0.5,
+      "ft_v": 0.492,
+      "to_v": 7.6
     },
     "locked": false
   },
@@ -3207,6 +3226,25 @@
       "fg_v": 0.6,
       "ft_v": 0.55,
       "to_v": 5.7
+    },
+    "locked": false
+  },
+  {
+    "Name": "Jalen Suggs",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 3,
+    "TotalV": -0.39,
+    "Stats": {
+      "pts_v": 3.0,
+      "m3_v": 8.0,
+      "reb_v": 0.3,
+      "ast_v": 5.0,
+      "stl_v": 5.7,
+      "blk_v": 2.0,
+      "fg_v": 0.3,
+      "ft_v": 0.357,
+      "to_v": 9.3
     },
     "locked": false
   },
@@ -3249,44 +3287,6 @@
     "locked": false
   },
   {
-    "Name": "Jalen Suggs",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 3,
-    "TotalV": -0.39,
-    "Stats": {
-      "pts_v": 3.0,
-      "m3_v": 8.0,
-      "reb_v": 0.3,
-      "ast_v": 5.0,
-      "stl_v": 5.7,
-      "blk_v": 2.0,
-      "fg_v": 0.3,
-      "ft_v": 0.357,
-      "to_v": 9.3
-    },
-    "locked": false
-  },
-  {
-    "Name": "Collin Murray-Boyles",
-    "Pos": "PF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.39,
-    "Stats": {
-      "pts_v": 8.0,
-      "m3_v": 9.6,
-      "reb_v": 0.6,
-      "ast_v": 4.8,
-      "stl_v": 1.3,
-      "blk_v": 0.9,
-      "fg_v": 0.5,
-      "ft_v": 0.492,
-      "to_v": 7.6
-    },
-    "locked": false
-  },
-  {
     "Name": "Jeremiah Fears",
     "Pos": "PG",
     "Cost": 1.0,
@@ -3306,20 +3306,20 @@
     "locked": false
   },
   {
-    "Name": "Day'Ron Sharpe",
+    "Name": "Khaman Maluach",
     "Pos": "C",
     "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.4,
+    "G": 7,
+    "TotalV": -0.39,
     "Stats": {
-      "pts_v": 8.0,
+      "pts_v": 7.0,
       "m3_v": 7.3,
-      "reb_v": 0.4,
-      "ast_v": 7.1,
-      "stl_v": 2.6,
-      "blk_v": 0.6,
-      "fg_v": 1.1,
-      "ft_v": 0.5,
+      "reb_v": 0.1,
+      "ast_v": 6.0,
+      "stl_v": 1.3,
+      "blk_v": 0.7,
+      "fg_v": 0.9,
+      "ft_v": 0.568,
       "to_v": 5.3
     },
     "locked": false
@@ -3344,6 +3344,25 @@
     "locked": false
   },
   {
+    "Name": "Day'Ron Sharpe",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.41,
+    "Stats": {
+      "pts_v": 8.0,
+      "m3_v": 7.1,
+      "reb_v": 0.4,
+      "ast_v": 7.1,
+      "stl_v": 2.6,
+      "blk_v": 0.6,
+      "fg_v": 1.1,
+      "ft_v": 0.5,
+      "to_v": 5.3
+    },
+    "locked": false
+  },
+  {
     "Name": "Kel'el Ware",
     "Pos": "C",
     "Cost": 1.0,
@@ -3359,6 +3378,25 @@
       "fg_v": 0.9,
       "ft_v": 0.419,
       "to_v": 9.3
+    },
+    "locked": false
+  },
+  {
+    "Name": "Charles Bassey",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.42,
+    "Stats": {
+      "pts_v": 7.0,
+      "m3_v": 11.8,
+      "reb_v": 7.0,
+      "ast_v": 0.0,
+      "stl_v": 5.3,
+      "blk_v": 0.6,
+      "fg_v": 0.1,
+      "ft_v": 1.0,
+      "to_v": 0.655
     },
     "locked": false
   },
@@ -3401,25 +3439,6 @@
     "locked": false
   },
   {
-    "Name": "Dylan Cardwell",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 1,
-    "TotalV": -0.43,
-    "Stats": {
-      "pts_v": 1.0,
-      "m3_v": 12.8,
-      "reb_v": 4.0,
-      "ast_v": 0.0,
-      "stl_v": 6.0,
-      "blk_v": 0.0,
-      "fg_v": 1.0,
-      "ft_v": 0.0,
-      "to_v": 0.667
-    },
-    "locked": false
-  },
-  {
     "Name": "Joan Beringer",
     "Pos": "PF",
     "Cost": 1.0,
@@ -3435,6 +3454,25 @@
       "fg_v": 0.8,
       "ft_v": 0.575,
       "to_v": 4.4
+    },
+    "locked": false
+  },
+  {
+    "Name": "Dylan Cardwell",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 1,
+    "TotalV": -0.43,
+    "Stats": {
+      "pts_v": 1.0,
+      "m3_v": 12.8,
+      "reb_v": 4.0,
+      "ast_v": 0.0,
+      "stl_v": 6.0,
+      "blk_v": 0.0,
+      "fg_v": 1.0,
+      "ft_v": 0.0,
+      "to_v": 0.667
     },
     "locked": false
   },
@@ -3477,25 +3515,6 @@
     "locked": false
   },
   {
-    "Name": "DeAndre Jordan",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 2,
-    "TotalV": -0.43,
-    "Stats": {
-      "pts_v": 2.0,
-      "m3_v": 6.0,
-      "reb_v": 0.0,
-      "ast_v": 6.5,
-      "stl_v": 1.0,
-      "blk_v": 0.0,
-      "fg_v": 1.0,
-      "ft_v": 1.0,
-      "to_v": 2.0
-    },
-    "locked": false
-  },
-  {
     "Name": "Jordan Poole",
     "Pos": "SG",
     "Cost": 1.0,
@@ -3511,6 +3530,44 @@
       "fg_v": 0.5,
       "ft_v": 0.19,
       "to_v": 5.3
+    },
+    "locked": false
+  },
+  {
+    "Name": "DeAndre Jordan",
+    "Pos": "C",
+    "Cost": 1.0,
+    "G": 2,
+    "TotalV": -0.44,
+    "Stats": {
+      "pts_v": 2.0,
+      "m3_v": 6.0,
+      "reb_v": 0.0,
+      "ast_v": 6.5,
+      "stl_v": 1.0,
+      "blk_v": 0.0,
+      "fg_v": 1.0,
+      "ft_v": 1.0,
+      "to_v": 2.0
+    },
+    "locked": false
+  },
+  {
+    "Name": "Draymond Green",
+    "Pos": "PF",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.44,
+    "Stats": {
+      "pts_v": 7.0,
+      "m3_v": 3.0,
+      "reb_v": 0.3,
+      "ast_v": 5.0,
+      "stl_v": 7.0,
+      "blk_v": 0.9,
+      "fg_v": 0.9,
+      "ft_v": 0.381,
+      "to_v": 3.0
     },
     "locked": false
   },
@@ -3553,21 +3610,21 @@
     "locked": false
   },
   {
-    "Name": "Khaman Maluach",
-    "Pos": "C",
+    "Name": "Darius Garland",
+    "Pos": "PG",
     "Cost": 1.0,
-    "G": 6,
-    "TotalV": -0.44,
+    "G": 8,
+    "TotalV": -0.45,
     "Stats": {
-      "pts_v": 6.0,
-      "m3_v": 7.2,
-      "reb_v": 0.2,
-      "ast_v": 6.0,
-      "stl_v": 1.2,
-      "blk_v": 0.5,
-      "fg_v": 1.0,
-      "ft_v": 0.548,
-      "to_v": 5.2
+      "pts_v": 8.0,
+      "m3_v": 2.5,
+      "reb_v": 1.6,
+      "ast_v": 6.6,
+      "stl_v": 0.6,
+      "blk_v": 0.0,
+      "fg_v": 0.465,
+      "ft_v": 0.844,
+      "to_v": 4.0
     },
     "locked": false
   },
@@ -3614,36 +3671,17 @@
     "Pos": "SF",
     "Cost": 1.0,
     "G": 7,
-    "TotalV": -0.45,
+    "TotalV": -0.46,
     "Stats": {
       "pts_v": 7.0,
       "m3_v": 12.7,
       "reb_v": 1.7,
-      "ast_v": 2.1,
+      "ast_v": 2.0,
       "stl_v": 1.9,
       "blk_v": 1.0,
       "fg_v": 0.3,
       "ft_v": 0.403,
       "to_v": 10.3
-    },
-    "locked": false
-  },
-  {
-    "Name": "Darius Garland",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.46,
-    "Stats": {
-      "pts_v": 8.0,
-      "m3_v": 2.5,
-      "reb_v": 1.6,
-      "ast_v": 6.6,
-      "stl_v": 0.6,
-      "blk_v": 0.0,
-      "fg_v": 0.465,
-      "ft_v": 0.844,
-      "to_v": 4.0
     },
     "locked": false
   },
@@ -3705,25 +3743,6 @@
     "locked": false
   },
   {
-    "Name": "Charles Bassey",
-    "Pos": "C",
-    "Cost": 1.0,
-    "G": 6,
-    "TotalV": -0.46,
-    "Stats": {
-      "pts_v": 6.0,
-      "m3_v": 11.4,
-      "reb_v": 6.8,
-      "ast_v": 0.0,
-      "stl_v": 5.0,
-      "blk_v": 0.7,
-      "fg_v": 0.2,
-      "ft_v": 0.7,
-      "to_v": 0.64
-    },
-    "locked": false
-  },
-  {
     "Name": "Anfernee Simons",
     "Pos": "SG",
     "Cost": 1.0,
@@ -3739,6 +3758,25 @@
       "fg_v": 0.2,
       "ft_v": 0.39,
       "to_v": 8.6
+    },
+    "locked": false
+  },
+  {
+    "Name": "Brandon Williams",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.47,
+    "Stats": {
+      "pts_v": 8.0,
+      "m3_v": 11.4,
+      "reb_v": 0.9,
+      "ast_v": 2.6,
+      "stl_v": 2.6,
+      "blk_v": 0.9,
+      "fg_v": 0.4,
+      "ft_v": 0.4,
+      "to_v": 8.8
     },
     "locked": false
   },
@@ -3762,78 +3800,21 @@
     "locked": false
   },
   {
-    "Name": "Brandon Williams",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": -0.47,
-    "Stats": {
-      "pts_v": 7.0,
-      "m3_v": 11.6,
-      "reb_v": 1.0,
-      "ast_v": 2.9,
-      "stl_v": 2.4,
-      "blk_v": 1.0,
-      "fg_v": 0.3,
-      "ft_v": 0.381,
-      "to_v": 9.0
-    },
-    "locked": false
-  },
-  {
-    "Name": "Tyrese Proctor",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": -0.48,
-    "Stats": {
-      "pts_v": 7.0,
-      "m3_v": 14.3,
-      "reb_v": 6.3,
-      "ast_v": 1.3,
-      "stl_v": 2.6,
-      "blk_v": 1.9,
-      "fg_v": 0.4,
-      "ft_v": 0.0,
-      "to_v": 0.533
-    },
-    "locked": false
-  },
-  {
-    "Name": "Draymond Green",
-    "Pos": "PF",
+    "Name": "Luke Kennard",
+    "Pos": "SG",
     "Cost": 1.0,
     "G": 6,
     "TotalV": -0.48,
     "Stats": {
       "pts_v": 6.0,
-      "m3_v": 3.2,
-      "reb_v": 0.3,
-      "ast_v": 5.0,
-      "stl_v": 6.3,
-      "blk_v": 0.8,
-      "fg_v": 0.8,
-      "ft_v": 0.389,
-      "to_v": 3.0
-    },
-    "locked": false
-  },
-  {
-    "Name": "Kentavious Caldwell-Pope",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 9,
-    "TotalV": -0.48,
-    "Stats": {
-      "pts_v": 9.0,
-      "m3_v": 5.8,
-      "reb_v": 1.3,
-      "ast_v": 2.3,
-      "stl_v": 1.3,
-      "blk_v": 0.9,
-      "fg_v": 0.1,
-      "ft_v": 0.439,
-      "to_v": 4.6
+      "m3_v": 7.8,
+      "reb_v": 2.0,
+      "ast_v": 1.5,
+      "stl_v": 2.0,
+      "blk_v": 0.2,
+      "fg_v": 0.0,
+      "ft_v": 0.517,
+      "to_v": 4.8
     },
     "locked": false
   },
@@ -3842,7 +3823,7 @@
     "Pos": "PF",
     "Cost": 1.0,
     "G": 6,
-    "TotalV": -0.49,
+    "TotalV": -0.48,
     "Stats": {
       "pts_v": 6.0,
       "m3_v": 14.7,
@@ -3857,11 +3838,49 @@
     "locked": false
   },
   {
+    "Name": "Kentavious Caldwell-Pope",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 9,
+    "TotalV": -0.49,
+    "Stats": {
+      "pts_v": 9.0,
+      "m3_v": 5.8,
+      "reb_v": 1.3,
+      "ast_v": 2.3,
+      "stl_v": 1.3,
+      "blk_v": 0.9,
+      "fg_v": 0.1,
+      "ft_v": 0.439,
+      "to_v": 4.6
+    },
+    "locked": false
+  },
+  {
+    "Name": "Kingston Flemings",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.49,
+    "Stats": {
+      "pts_v": 8.0,
+      "m3_v": 8.0,
+      "reb_v": 0.9,
+      "ast_v": 2.9,
+      "stl_v": 4.6,
+      "blk_v": 0.8,
+      "fg_v": 0.3,
+      "ft_v": 0.51,
+      "to_v": 6.4
+    },
+    "locked": false
+  },
+  {
     "Name": "Cam Johnson",
     "Pos": "PF",
     "Cost": 1.0,
     "G": 4,
-    "TotalV": -0.49,
+    "TotalV": -0.5,
     "Stats": {
       "pts_v": 4.0,
       "m3_v": 9.0,
@@ -3872,25 +3891,6 @@
       "fg_v": 0.0,
       "ft_v": 0.419,
       "to_v": 7.8
-    },
-    "locked": false
-  },
-  {
-    "Name": "Andrew Wiggins",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.49,
-    "Stats": {
-      "pts_v": 8.0,
-      "m3_v": 9.4,
-      "reb_v": 1.4,
-      "ast_v": 2.8,
-      "stl_v": 1.4,
-      "blk_v": 0.6,
-      "fg_v": 0.8,
-      "ft_v": 0.429,
-      "to_v": 8.8
     },
     "locked": false
   },
@@ -3914,59 +3914,21 @@
     "locked": false
   },
   {
-    "Name": "Kingston Flemings",
-    "Pos": "PG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.5,
-    "Stats": {
-      "pts_v": 8.0,
-      "m3_v": 7.9,
-      "reb_v": 0.8,
-      "ast_v": 2.9,
-      "stl_v": 4.6,
-      "blk_v": 0.8,
-      "fg_v": 0.3,
-      "ft_v": 0.51,
-      "to_v": 6.4
-    },
-    "locked": false
-  },
-  {
-    "Name": "Luke Kennard",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 5,
-    "TotalV": -0.5,
-    "Stats": {
-      "pts_v": 5.0,
-      "m3_v": 7.0,
-      "reb_v": 1.8,
-      "ast_v": 1.6,
-      "stl_v": 1.4,
-      "blk_v": 0.2,
-      "fg_v": 0.0,
-      "ft_v": 0.524,
-      "to_v": 4.2
-    },
-    "locked": false
-  },
-  {
-    "Name": "Oso Ighodaro",
+    "Name": "Trendon Watford",
     "Pos": "PF",
     "Cost": 1.0,
     "G": 4,
     "TotalV": -0.5,
     "Stats": {
       "pts_v": 4.0,
-      "m3_v": 8.3,
+      "m3_v": 6.5,
       "reb_v": 0.0,
-      "ast_v": 5.3,
-      "stl_v": 4.3,
-      "blk_v": 0.0,
-      "fg_v": 1.0,
-      "ft_v": 0.682,
-      "to_v": 5.5
+      "ast_v": 3.0,
+      "stl_v": 1.3,
+      "blk_v": 1.3,
+      "fg_v": 0.5,
+      "ft_v": 0.545,
+      "to_v": 2.8
     },
     "locked": false
   },
@@ -3990,30 +3952,11 @@
     "locked": false
   },
   {
-    "Name": "Trendon Watford",
-    "Pos": "PF",
-    "Cost": 1.0,
-    "G": 4,
-    "TotalV": -0.5,
-    "Stats": {
-      "pts_v": 4.0,
-      "m3_v": 6.5,
-      "reb_v": 0.0,
-      "ast_v": 3.0,
-      "stl_v": 1.3,
-      "blk_v": 1.3,
-      "fg_v": 0.5,
-      "ft_v": 0.545,
-      "to_v": 2.8
-    },
-    "locked": false
-  },
-  {
     "Name": "Lu Dort",
     "Pos": "SF",
     "Cost": 1.0,
     "G": 9,
-    "TotalV": -0.5,
+    "TotalV": -0.51,
     "Stats": {
       "pts_v": 9.0,
       "m3_v": 8.9,
@@ -4024,6 +3967,44 @@
       "fg_v": 0.2,
       "ft_v": 0.351,
       "to_v": 8.2
+    },
+    "locked": false
+  },
+  {
+    "Name": "Ryan Dunn",
+    "Pos": "SF",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.51,
+    "Stats": {
+      "pts_v": 7.0,
+      "m3_v": 5.3,
+      "reb_v": 0.7,
+      "ast_v": 3.4,
+      "stl_v": 1.1,
+      "blk_v": 0.3,
+      "fg_v": 0.9,
+      "ft_v": 0.5,
+      "to_v": 4.0
+    },
+    "locked": false
+  },
+  {
+    "Name": "Tyrese Proctor",
+    "Pos": "PG",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.51,
+    "Stats": {
+      "pts_v": 7.0,
+      "m3_v": 14.3,
+      "reb_v": 6.3,
+      "ast_v": 1.3,
+      "stl_v": 2.6,
+      "blk_v": 1.9,
+      "fg_v": 0.3,
+      "ft_v": 0.0,
+      "to_v": 0.533
     },
     "locked": false
   },
@@ -4051,7 +4032,7 @@
     "Pos": "PG",
     "Cost": 1.0,
     "G": 7,
-    "TotalV": -0.51,
+    "TotalV": -0.52,
     "Stats": {
       "pts_v": 7.0,
       "m3_v": 14.4,
@@ -4070,7 +4051,7 @@
     "Pos": "PF",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.51,
+    "TotalV": -0.52,
     "Stats": {
       "pts_v": 8.0,
       "m3_v": 7.6,
@@ -4104,58 +4085,20 @@
     "locked": false
   },
   {
-    "Name": "Kevin Huerter",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.53,
-    "Stats": {
-      "pts_v": 8.0,
-      "m3_v": 6.5,
-      "reb_v": 1.5,
-      "ast_v": 2.4,
-      "stl_v": 1.9,
-      "blk_v": 0.8,
-      "fg_v": 0.5,
-      "ft_v": 0.388,
-      "to_v": 6.1
-    },
-    "locked": false
-  },
-  {
-    "Name": "Sidy Cissoko",
+    "Name": "Andrew Wiggins",
     "Pos": "SF",
     "Cost": 1.0,
-    "G": 7,
+    "G": 9,
     "TotalV": -0.53,
     "Stats": {
-      "pts_v": 7.0,
-      "m3_v": 6.3,
-      "reb_v": 0.9,
-      "ast_v": 4.1,
-      "stl_v": 2.1,
-      "blk_v": 0.4,
-      "fg_v": 0.3,
-      "ft_v": 0.538,
-      "to_v": 3.7
-    },
-    "locked": false
-  },
-  {
-    "Name": "Terrence Shannon Jr.",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 7,
-    "TotalV": -0.53,
-    "Stats": {
-      "pts_v": 7.0,
-      "m3_v": 12.0,
-      "reb_v": 1.9,
-      "ast_v": 3.6,
-      "stl_v": 2.6,
-      "blk_v": 0.4,
-      "fg_v": 0.1,
-      "ft_v": 0.424,
+      "pts_v": 9.0,
+      "m3_v": 8.6,
+      "reb_v": 1.2,
+      "ast_v": 3.1,
+      "stl_v": 1.7,
+      "blk_v": 0.6,
+      "fg_v": 0.8,
+      "ft_v": 0.408,
       "to_v": 8.4
     },
     "locked": false
@@ -4176,6 +4119,63 @@
       "fg_v": 1.0,
       "ft_v": 0.5,
       "to_v": 1.0
+    },
+    "locked": false
+  },
+  {
+    "Name": "Terrence Shannon Jr.",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.54,
+    "Stats": {
+      "pts_v": 7.0,
+      "m3_v": 12.0,
+      "reb_v": 1.9,
+      "ast_v": 3.6,
+      "stl_v": 2.6,
+      "blk_v": 0.4,
+      "fg_v": 0.1,
+      "ft_v": 0.424,
+      "to_v": 8.4
+    },
+    "locked": false
+  },
+  {
+    "Name": "Sidy Cissoko",
+    "Pos": "SF",
+    "Cost": 1.0,
+    "G": 7,
+    "TotalV": -0.54,
+    "Stats": {
+      "pts_v": 7.0,
+      "m3_v": 6.3,
+      "reb_v": 0.9,
+      "ast_v": 4.1,
+      "stl_v": 2.1,
+      "blk_v": 0.4,
+      "fg_v": 0.3,
+      "ft_v": 0.538,
+      "to_v": 3.7
+    },
+    "locked": false
+  },
+  {
+    "Name": "Kevin Huerter",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.54,
+    "Stats": {
+      "pts_v": 8.0,
+      "m3_v": 6.5,
+      "reb_v": 1.5,
+      "ast_v": 2.3,
+      "stl_v": 1.9,
+      "blk_v": 0.8,
+      "fg_v": 0.5,
+      "ft_v": 0.388,
+      "to_v": 6.1
     },
     "locked": false
   },
@@ -4218,11 +4218,30 @@
     "locked": false
   },
   {
+    "Name": "Matas Buzelis",
+    "Pos": "SF",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.54,
+    "Stats": {
+      "pts_v": 8.0,
+      "m3_v": 12.9,
+      "reb_v": 1.3,
+      "ast_v": 4.4,
+      "stl_v": 2.0,
+      "blk_v": 0.5,
+      "fg_v": 0.6,
+      "ft_v": 0.408,
+      "to_v": 9.5
+    },
+    "locked": false
+  },
+  {
     "Name": "Luka Garza",
     "Pos": "C",
     "Cost": 1.0,
     "G": 8,
-    "TotalV": -0.54,
+    "TotalV": -0.55,
     "Stats": {
       "pts_v": 8.0,
       "m3_v": 12.6,
@@ -4237,21 +4256,21 @@
     "locked": false
   },
   {
-    "Name": "Matas Buzelis",
-    "Pos": "SF",
+    "Name": "Al Horford",
+    "Pos": "C",
     "Cost": 1.0,
-    "G": 8,
+    "G": 7,
     "TotalV": -0.55,
     "Stats": {
-      "pts_v": 8.0,
-      "m3_v": 12.9,
-      "reb_v": 1.3,
-      "ast_v": 4.4,
-      "stl_v": 2.0,
-      "blk_v": 0.5,
+      "pts_v": 7.0,
+      "m3_v": 5.4,
+      "reb_v": 1.4,
+      "ast_v": 4.0,
+      "stl_v": 1.0,
+      "blk_v": 0.3,
       "fg_v": 0.6,
-      "ft_v": 0.408,
-      "to_v": 9.5
+      "ft_v": 0.467,
+      "to_v": 4.3
     },
     "locked": false
   },
@@ -4290,6 +4309,25 @@
       "fg_v": 0.1,
       "ft_v": 0.361,
       "to_v": 4.5
+    },
+    "locked": false
+  },
+  {
+    "Name": "Jase Richardson",
+    "Pos": "SG",
+    "Cost": 1.0,
+    "G": 8,
+    "TotalV": -0.55,
+    "Stats": {
+      "pts_v": 8.0,
+      "m3_v": 6.4,
+      "reb_v": 0.9,
+      "ast_v": 1.9,
+      "stl_v": 2.5,
+      "blk_v": 0.8,
+      "fg_v": 0.6,
+      "ft_v": 0.377,
+      "to_v": 6.6
     },
     "locked": false
   },
@@ -4389,25 +4427,6 @@
     "locked": false
   },
   {
-    "Name": "Jaylon Tyson",
-    "Pos": "SG",
-    "Cost": 1.0,
-    "G": 5,
-    "TotalV": -0.57,
-    "Stats": {
-      "pts_v": 5.0,
-      "m3_v": 7.8,
-      "reb_v": 1.0,
-      "ast_v": 3.6,
-      "stl_v": 2.8,
-      "blk_v": 0.6,
-      "fg_v": 0.4,
-      "ft_v": 0.41,
-      "to_v": 7.8
-    },
-    "locked": false
-  },
-  {
     "Name": "DeMar DeRozan",
     "Pos": "SF",
     "Cost": 1.0,
@@ -4423,25 +4442,6 @@
       "fg_v": 0.2,
       "ft_v": 0.404,
       "to_v": 8.7
-    },
-    "locked": false
-  },
-  {
-    "Name": "Mikal Bridges",
-    "Pos": "SF",
-    "Cost": 1.0,
-    "G": 8,
-    "TotalV": -0.58,
-    "Stats": {
-      "pts_v": 8.0,
-      "m3_v": 6.3,
-      "reb_v": 1.0,
-      "ast_v": 2.9,
-      "stl_v": 2.0,
-      "blk_v": 0.9,
-      "fg_v": 0.4,
-      "ft_v": 0.333,
-      "to_v": 7.1
     },
     "locked": false
   }
